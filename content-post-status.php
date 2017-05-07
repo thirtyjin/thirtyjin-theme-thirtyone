@@ -1,0 +1,61 @@
+<?php
+/**
+ * The template for displaying posts in the Status Post Format on index and archive pages
+ *
+ * @package Thirty One
+ * @subpackage Thirty_One
+ */
+?>
+
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<header class="entry-header">
+			
+			<!-- thumbnail  Start-->
+			<?php if ( has_post_thumbnail() ) { ?>
+				<div class="post-media">
+					<?php the_post_thumbnail('feature_medium'); ?>
+				</div>
+				<!--END .post-media -->
+			<?php } else {?>
+			<!--No thumbnail-->
+			<?php } ?>
+			<!--END. thumbnail  -->
+		
+		<?php if( !is_singular() ) { 
+				get_template_part( 'meta', 'header'  ); 
+			} ?>
+		
+		</header><!-- .entry-header -->
+
+		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+		<div class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
+		<?php else : ?>
+		<div class="entry-content">
+			
+			<div class="status-left-meta">
+			
+				<!--avatar  -->	
+				<div class="author-avatar">
+				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author" title="<?php echo get_the_author(); ?>">
+					<?php echo get_avatar( get_the_author_meta( 'ID' ), apply_filters( 'thirtyone_status_avatar', '65' ) ); ?>
+				</a>
+				</div>
+				
+			</div> <!--End .status-left-meta  -->	
+			
+			
+			<div class="status-content">
+			
+			<?php the_content( __( 'Read More', 'thirtyone' ) ); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'thirtyone' ) . '</span>', 'after' => '</div>' ) ); ?>
+			
+			</div>
+			
+		</div><!-- .entry-content -->
+		<?php endif; ?>
+
+	<?php get_template_part( 'meta', 'footer' ); ?> 
+
+	</article><!-- #post-<?php the_ID(); ?> -->

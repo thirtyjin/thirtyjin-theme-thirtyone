@@ -1,0 +1,468 @@
+/*Tablet stylesheet*/
+
+/* 
+2em (16 x 2 =32)
+1.75em (16 x 1.75 =28)
+1.625em (16 x 1.625 =26)
+1.5em (16 x 1.5 =24)
+1.375em (16 x 1.375 = 22)
+1.25em (16 x 1.25 = 20)
+1.125em (16 x 1.125 = 18)
+1em (1em = 16px)
+0.875em (16 x 0.875 = 14)
+0.75em (16 x 0.75 = 12)
+0.625em (16 x 0.625 = 10) 
+*/
+
+
+@media only screen and (min-width : 680px) and (max-width : 960px) {
+
+body { -webkit-text-size-adjust: none; }
+
+#page {
+	min-width: 768px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	/* Remove the margin on singular articles */
+	.singular .entry-header,
+	.singular .entry-content,
+	.singular footer.entry-meta,
+	.singular #comments-title {
+		width: 100%;
+	}
+	/* Simplify the pullquotes and pull styles */
+	.singular blockquote.pull {
+		margin: 0 0 1.625em;
+	}
+	.singular .pull.alignleft {
+		margin: 0 1.625em 0 0;
+	}
+	.singular .pull.alignright {
+		margin: 0 0 0 1.625em;
+	}
+
+	.singular #author-info {
+		margin: 2.2em -8.8% 0;
+		padding: 20px 8.8%;
+	}
+	
+	
+	
+	/* Make sure we have room for our comment avatars */
+	.commentlist {
+		width: 100%;
+	}
+	.commentlist > li.comment,
+	.commentlist .pingback {
+		margin-left: 102px;
+		width: auto;
+	}
+	/* And a full-width comment form */
+	#respond {
+		width: auto;
+	}
+	/* No need to float footer widgets at this size */
+	#footer_content #supplementary .widget-area {
+		float: none;
+		margin-right: 0;
+		width: auto;
+	}
+	/* No need to float 404 widgets at this size */
+	.error404 #main .widget {
+		float: none;
+		margin-right: 0;
+		width: auto;
+	}
+
+
+#footer_content {
+	max-width: 680px;
+	min-width: 680px;
+
+}
+
+#site-description {
+	text-align: center;
+}	
+	
+  nav ul     { display:none!important; }
+  nav select { 
+  	display: inline-block; 
+}	
+
+/* Simplify the basic layout */
+
+#main {
+	width: 680px;
+	margin: 0 auto;
+	max-width: 680px;
+	min-width: 680px;
+
+}
+
+#main #content {
+	margin: 0 auto;
+	width: auto;
+}
+#nav-below {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 1.625em;
+}
+#main #primary {
+	float: none;
+	margin: 0 auto 15px;
+	width: 680px;
+}
+#main #secondary {
+	float: none;
+	margin: 0 auto 15px;
+	width: 680px;
+}
+.full_width {
+	width: 680px !important;
+}
+
+
+#hello_bar {
+	margin:0 auto;	
+}
+.hello-container {
+	width:680px;
+}
+#hello_bar .hello-entry {
+	width:655px;
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	freebies article css
+/*-----------------------------------------------------------------------------------*/
+
+.post-type-archive-freebies #content {
+	margin-right: -30px!important;
+}
+
+
+
+
+
+
+#branding {
+	max-width: 680px;
+	min-width: 680px;
+}
+
+
+
+#branding hgroup {
+	float: none;
+	width: 680px;
+	margin: 0 auto;
+}
+
+
+
+
+#site-logo {
+	float: none;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+
+#access {
+	float: none;
+	margin: 10px auto;
+	width: 680px;
+}
+
+
+
+#social-bar {
+	display: block;	
+	float: none;
+	width: 680px;
+	margin: 0 auto;
+}
+
+#social-bar .social-channels {
+	float: left;
+	margin: 10px 15px;
+}
+
+
+/* =Menu
+-------------------------------------------------------------- */
+
+nav select {
+		font-size: 1em;
+		line-height: 2em;	
+		color: #EEE;
+		display: block;
+		text-decoration: none;
+		text-transform: uppercase;
+		width: 680px;
+		-webkit-background-size: none;	
+		background-size: none;	
+		-webkit-appearance: none;
+		border: none;
+		box-shadow: none;
+	
+		padding: 1em 1em 1em 40px;	
+		background-color: transparent;
+		background: url('../../images/navigation_icon.png') no-repeat 10px center;
+}
+
+nav select option {
+	 background-color: #292B2F;
+}
+
+/* Breadcrumbs navigation bar */
+.mbx-navigation {
+	padding-left: 5px;
+	display:block;
+	width:680px;
+	margin: 0 auto;
+	float:none;
+}
+
+
+#branding #searchform {
+margin: 10px 15px;
+}
+
+
+
+
+
+
+	
+/* =Widgets
+----------------------------------------------- */
+
+.widget_meta li,
+.widget_links li,
+.widget_pages li,
+.widget_categories li,
+.widget_archive li,
+.widget_nav_menu li {
+    width: 22%;
+	float:left;
+	margin-right: 3%!important;
+}
+
+.widget_recent_comments li,
+.widget_recent_entries li,
+.widget_pop_entries li,
+.widget_mostlikedposts li,
+.widget_thirtyone_ephemera li {
+    width: 47%;
+	float:left;
+	margin-right: 3%!important;
+}
+
+
+
+
+
+
+/* For the two-columns portfolio page  */
+.one-column .isotope-item {
+	width: 750px;
+	min-height: 400px;
+}
+
+.one-column .isotope-item img {
+	max-width: 740px;
+	height: auto;
+}
+
+
+
+/* slides shortcode  */
+.slides_container img {
+	max-width: 725px;
+}
+
+.slider img {
+	max-width: 680px!important;
+	width: 678px!important;
+	height: auto!important;
+}
+
+.slides_control div {
+	max-width: 725px;
+}
+.slides_container .description {
+	width: 480px;
+	max-width: 680px;
+}
+
+
+
+
+/* =slideshow
+----------------------------------------------- */
+
+.slidershow li img {
+width: 100%;
+height: auto;
+}
+
+
+
+
+.tagcloud a {
+	font-size: 1.5em !important;
+	margin: 0 0.5em 0.5em 0;
+	padding: 0.5em 1em;		
+}
+
+
+#supplementary {
+	width: 680px;
+	margin: 0 auto;
+	padding: 10px;
+}
+	
+	
+	
+#site-generator {
+	width: 680px;	
+	font-size: 1.125em;
+	font-style: italic;
+	margin: 10px auto 0;
+	padding: 10px 0;
+}
+
+#site-generator .copyright {
+	display: block;
+	width: 100%;
+	float: left;
+	margin: 10px auto;
+}
+#site-generator .footerMenu {
+	display: block;
+	width: 100%;
+	float: left;
+	margin: 10px auto;
+}
+#site-generator .footerMenu ul {
+	float: left;
+	margin: 0;
+
+}
+	
+	
+	
+
+/* go to top */
+
+#back-to-top {
+	bottom: 0;
+	left: 0;
+	margin-left: 0;
+	height: 0;
+	width: 0;
+	display: none;
+	visibility: hidden;
+}
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	jplay Styles
+/*-----------------------------------------------------------------------------------*/
+
+
+	div.jp-jplayer { 
+	    width: 600px; 
+	}
+	
+	div.jp-audio {
+		width: 600px;
+	}
+	div.jp-audio div.jp-type-single div.jp-progress {
+		width: 370px;
+	}
+
+
+
+
+
+}

@@ -1,0 +1,68 @@
+<?php
+
+$incdir = get_template_directory() . '/inc/';
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	Define Constants
+ /*-----------------------------------------------------------------------------------*/
+
+define('THIRTYONE_DIR', get_template_directory() .'/inc');
+define('THIRTYONE_URL', get_template_directory_uri() .'/inc');
+define('THIRTYONE_FRAMEWORK_VERSION', '1.0');
+define('THIRTYONE_UPDATE_URL', 'http://localhost/update');
+define('THIRTYONE_DEBUG', false);
+
+require_once(THIRTYONE_DIR .'/thirtyone-admin-functions.php');
+require_once(THIRTYONE_DIR .'/thirtyone-admin-init.php');
+require_once(THIRTYONE_DIR .'/thirtyone-theme-functions.php');
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	Load Theme Specific Components
+/*-----------------------------------------------------------------------------------*/
+
+/**
+ * Meta Boxes
+ */
+
+include_once( $incdir .'meta/thirtyone-post-meta-boxes.php' );
+include_once( $incdir .'meta/thirtyone-page-meta-boxes.php' );
+include_once( $incdir .'meta/thirtyone-portfolio-meta-boxes.php' );
+include_once( $incdir .'meta/thirtyone-freebies-meta-boxes.php' );
+include_once( $incdir .'meta/thirtyone-slideshow-meta-boxes.php' );
+//include_once( $incdir .'meta/thirtyone-thumbnail-meta-boxes.php' );
+include_once( $incdir .'meta/thirtyone-seo-meta-boxes.php' );
+
+/**
+ * Theme Meta Boxes function
+ */
+require_once($incdir .'thirtyone-meta-options-function.php');
+
+
+
+/**
+ * Theme Options
+ */
+include_once( $incdir .'thirtyone-theme-options.php' );
+
+/**
+ * Theme Options function
+ */
+require_once($incdir .'thirtyone-theme-options-function.php');
+
+
+
+/**
+ * Load Widgets
+ */
+require_once($incdir .'widgets/widgets.php');
+require_once($incdir .'widgets/widget-flickr.php');
+require_once($incdir .'widgets/widget-video.php');
+require_once($incdir .'widgets/widget-newsletter.php');
+require_once($incdir .'widgets/widget-orangebox.php');
+//require_once($incdir .'widgets/widget-tweets.php');
+
+
+?>

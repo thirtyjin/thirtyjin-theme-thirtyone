@@ -1,0 +1,34 @@
+<?php
+/**
+ * The template for displaying posts in the Aside Post Format on index and archive pages
+ *
+ *
+ * @package Thirty_One
+ * @since Thirty One 1.0
+ */
+?>
+
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		
+
+		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+		<div class="entry-summary">
+		
+		    <div class="thumbnail_bg">
+				<?php the_excerpt(); ?>
+		    </div>
+			
+		</div><!-- .entry-summary -->
+		<?php else : ?>
+		<div class="entry-content">
+				<?php the_content( __( 'Read More', 'thirtyone' ) ); ?>
+			
+				<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'thirtyone' ) . '</span>', 'after' => '</div>' ) ); ?>
+		</div><!-- .entry-content -->
+		<?php endif; ?>
+
+	<?php if( !is_singular() ) { 
+				get_template_part( 'meta', 'header'  ); 
+			} ?>
+
+	</article><!-- #post-<?php the_ID(); ?> -->

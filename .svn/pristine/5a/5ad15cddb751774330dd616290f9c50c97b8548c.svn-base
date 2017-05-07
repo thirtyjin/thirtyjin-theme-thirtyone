@@ -1,0 +1,92 @@
+<?php
+/**
+ * Initialize the meta boxes. 
+ */
+add_action( 'admin_init', 'custom_freebies_meta_boxes' );
+
+/**
+ * Meta Boxes demo code.
+ *
+ * You can find all the available option types
+ * in demo-theme-options.php.
+ *
+ * @return    void
+ *
+ * @access    private
+ * @since     2.0
+ */
+function custom_freebies_meta_boxes() {
+  
+  /**
+   * Create a custom meta boxes array that we pass to
+   * the OptionTree Meta Box API Class.
+   */
+  $thirtyone_freebies_meta_box = array(
+  		'id'          => 'thirtyone_freebies_meta_box',
+  		'title'       => __( 'freebies Meta Box', 'thirtyone' ),
+  		'desc'        => __( 'freebies Meta Box Optionds', 'thirtyone' ),
+  		'pages'       => array( 'freebies' ),
+  		'context'     => 'normal',
+  		'priority'    => 'high',
+  		'fields'      => array(
+
+  				array(
+  						'id'          => 'thirtyone_hide_resources_url',
+  						'label'       => __( 'Hide the download/demo url', 'thirtyone' ),
+  						'desc'        => __( 'If you don not want show the download/demo button, plaease set to Off.', 'thirtyone' ),
+  						'std'         => 'on',
+  						'type'        => 'on-off',
+  						'section'     => 'freebies_default',
+  						'rows'        => '',
+  						'post_type'   => '',
+  						'taxonomy'    => '',
+  						'class'       => 'thirtyone_hide_resources_url',
+  						'choices'     => '',
+  				),
+  				array(
+  						'id'          => 'thirtyone_freebies_demo_url',
+  						'label'       => __( 'Demo URL', 'thirtyone' ),
+  						'desc'        => __( 'Freebies Demo URL.', 'thirtyone' ),
+  						'std'         => '',
+  						'type'        => 'text',
+  						'rows'        => '',
+  						'post_type'   => '',
+  						'taxonomy'    => '',
+  						'class'       => 'thirtyone_freebies_demo_url',
+				        'section'     => 'freebies_default'
+  				),
+  				array(
+  						'id'          => 'thirtyone_freebies_download_url',
+  						'label'       => __( 'download URL', 'thirtyone' ),
+  						'desc'        => __( 'Freebies Demo download URL.', 'thirtyone' ),
+  						'std'         => '',
+  						'type'        => 'text',
+  						'rows'        => '',
+  						'post_type'   => '',
+  						'taxonomy'    => '',
+  						'class'       => 'thirtyone_freebies_download_url'
+  				),
+  				array(
+				        'label'       => __( 'thirtyone freebies download post id select', 'thirtyone' ),
+				        'id'          => 'thirtyone_freebies_download_id_select',
+				        'type'        => 'custom-post-type-select',
+				        'desc'        => __( 'thirtyone freebies download post id select.', 'thirtyone' ),
+				        'std'         => '',
+				        'rows'        => '',
+				        'post_type'   => 'download',
+				        'taxonomy'    => '',
+				        'class'       => 'thirtyone_freebies_download_id_select',
+				        'section'     => 'freebies_default'
+			    ),
+  			)
+  	);
+
+  
+	/**
+	 * Register our meta boxes using the
+	 * ot_register_meta_box() function.
+	 */
+	ot_register_meta_box( $thirtyone_freebies_meta_box );
+
+  
+}

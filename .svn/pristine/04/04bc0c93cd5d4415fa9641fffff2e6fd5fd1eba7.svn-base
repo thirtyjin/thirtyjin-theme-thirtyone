@@ -1,0 +1,243 @@
+<?php
+/**
+ * The Header for our theme.
+ *
+ * Displays all of the <head> section and everything up till <div id="main">
+ *
+ * @package Thirty_One
+ * @since Thirty One 1.2
+ */
+?><!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html <?php language_attributes(); ?> >
+<!--<![endif]-->
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta http-equiv="imagetoolbar" content="no"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+
+
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<?php 
+	thirtyjin_meta_head(); 
+	wp_head();
+	thirtyjin_head(); 
+?>	
+
+<title>
+<?php
+	/*
+	 * Print the <title> tag based on what is being viewed.
+	 */
+	global $page, $paged;
+
+	wp_title( '|', true, 'right' );
+
+	// Add the blog name.
+	bloginfo( 'name' );
+
+	// Add the blog description for the home/front page.
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) )
+		echo " | $site_description";
+
+	// Add a page number if necessary:
+	if ( $paged >= 2 || $page >= 2 )
+		echo ' | ' . sprintf( __( 'Page %s', 'thirtyone' ), max( $paged, $page ) );
+
+	?>
+</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+
+<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
+<!--[if lt IE 9]>
+<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<script type="text/javascript">
+	SyntaxHighlighter.all()
+</script>
+
+	
+</head>
+
+
+<script>
+var cpro_id = 'u1538717';
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/i.js"></script>
+
+<body <?php body_class(); ?>>
+
+<?php 
+/*
+    If "prompt banner" set in theme options is not empty.
+    The prompt banner will display on the top;  
+*/
+$thirtyone_prompt = ot_get_option('thirtyone_prompt',array());
+
+if ( $thirtyone_prompt == 'on' ) { ?>
+<!-- Welcom TopBar -->
+
+	<div id="hello_bar">
+	    <div class="hello-container">        
+	        <?php 
+	        $thirtyone_prompt_content = ot_get_option('thirtyone_prompt_content',array());
+				if (!empty($thirtyone_prompt_content)) { ?>
+	        	<div class="hello-entry"><?php echo $thirtyone_prompt_content; ?> </div><a title="Close" id="close_bar" href="#"></a>
+	        <?php } else { ?>
+	        	<div class="hello-entry">Hello Guest, Welcome !</div><a title="Close" id="close_bar" href="#"></a>
+	        <?php }?>
+	        
+	    </div>
+	</div>
+	
+<!--END. Welcom TopBar -->
+	
+<?php } ?>
+	
+
+<div id="page" class="hfeed">
+	
+	<header class="body-header">
+	
+		<div id="page-header-mask"></div>
+		<div id="branding" role="banner" class="clearfix">		
+			
+			<div id="social-bar">
+			
+				<?php 
+				
+				if ($thirtyone_prompt=='on') { ?>
+				<div id="open_bar"><a title="Open Hello Bar" href="#"></a></div>
+				<?php } ?>
+				
+				
+				
+				
+				
+				<?php 
+				/* social list */
+				$thirtyone_social_list = ot_get_option('thirtyone_social_list',array());
+				if ( $thirtyone_social_list =='on'){?>
+				
+					<ul class="social-channels right">
+					<?php thirtyone_sns_channels(); ?>
+					</ul>
+				
+				<?php }?>
+				
+				
+				
+			</div>
+
+			<hgroup>
+    			<!-- BEGIN #logo -->
+    			
+    			<?php 
+    				/*
+    				    If "plain text logo" is set in theme options then use text
+        				if a logo url has been set in theme options then use that
+        				if none of the above then use the default logo.png 
+    				*/
+    			$plain_text_logo = ot_get_option('thirtyone_plain_text_logo', array());
+    			$thirtyone_custom_logo = ot_get_option('thirtyone_custom_logo');
+    			
+    			if ( $plain_text_logo =='on' ) { ?>
+    			
+    			<div id="site-logo" style="background: none;">
+    				<a id="site-title" class="icon-home" href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
+    			</div>
+    			<?php } elseif (!empty($thirtyone_custom_logo)) {?>
+    			
+    			<div id="site-logo"  style="background: none;">
+    				<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" >
+    					<img src="<?php echo $thirtyone_custom_logo; ?>" alt="<?php bloginfo( 'name' ); ?>"/>
+    				</a>
+    			</div>
+    			<?php } else {?>
+    			<div id="site-logo">
+    				<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>"></a>
+    			</div>
+    			<?php } ?>
+    			
+    			<!-- END #logo -->
+    			
+    			
+    			
+    			<?php 
+    			/*
+    				site description
+    			*/
+    			$thirtyone_site_description = ot_get_option('thirtyone_site_description',array());
+    			if ($thirtyone_site_description =='on') { ?>
+    				<div id="site-description">
+    					<a class="site-desc" href="<?php echo home_url(); ?>"><?php bloginfo( 'description' ); ?></a>
+    				</div>
+    			<?php } ?>
+    				
+    			
+			</hgroup>
+		
+		</div><!-- #branding -->
+	</header>
+	
+	<div id="main-navigation">
+	<div id="main-navigation-content" class="w-container container_12">
+		<nav id="access" role="navigation" class="grid_9">
+				<div id="site-logo-name">
+	    			<a href="<?php echo home_url(); ?>" class="icon-thirtyone_logo animated slideInRight" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a>
+	    		</div>
+			<?php wp_nav_menu( 
+							array( 
+								'theme_location' => 'primary',
+								'menu_class' => 'nor-page-nav',
+								'container_class' => 'nor-nav'
+								 ) 
+							); ?>
+		</nav><!-- #access -->    
+		
+		<div id="nav-search" class="grid_3">
+			<?php /* search form */
+			$thirtyone_header_search = ot_get_option('thirtyone_header_search',array());
+			if ($thirtyone_header_search=='on' && !is_search() ){ 
+				get_search_form(); 
+			 }?>
+		</div>
+	</div>
+	</div>
+
+	<div id="main-content" class="clearfix fade out">
+	
+	<?php //thirtyone_breadcrumbs
+
+	$thirtyone_dimox_breadcrumbs = ot_get_option('thirtyone_dimox_breadcrumbs',array()); 
+	
+	if ($thirtyone_dimox_breadcrumbs == 'on') {  ?>
+	
+		<header class="page-header-area">
+			<div class="page-title w-container container_12">
+				<div class="grid_8">
+				<?php thirtyone_page_title(); ?>
+				</div>
+				<div class="grid_4">
+				<?php thirtyone_breadcrumbs(); ?>
+				</div>
+			</div>
+		</header><!-- .entry-header -->	
+		
+	<?php } ?>
+			
+			

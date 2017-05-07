@@ -1,0 +1,38 @@
+<?php
+/**
+ * The Template for portfolio single posts.
+ *
+ * @package Thirty_One
+ * @since Thirty One 1.0
+ */
+
+get_header(); ?>
+<div id="main" class="clearfix">
+		<div id="primary" class="full_width">
+			<div id="content" role="main">
+			<?php 
+			if (have_posts()) : 
+			
+				while (have_posts()) : the_post(); 
+				get_template_part( 'content', 'single-portfolio' ); 
+				endwhile; 
+			
+			else: 
+    		     
+    		    // If no content, include the "No posts found" template.
+    		    get_template_part( 'content', 'none' );
+
+			endif; ?>
+    		    
+			<!--END #primary .hfeed-->
+					
+    		<?php //comments_template( '', true ); ?>
+			
+			
+			<?php thirtyone_single_nav(); ?>
+    		     
+			</div><!-- #content -->
+		</div><!-- #primary -->
+	</div>
+	<!-- #main -->
+<?php get_footer(); ?>

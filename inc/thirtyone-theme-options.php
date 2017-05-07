@@ -1,0 +1,702 @@
+<?php
+/**
+ * Initialize the options before anything else.
+ */
+add_action( 'admin_init', 'custom_theme_options', 1 );
+
+/**
+ * Build the custom settings & update OptionTree.
+ */
+function custom_theme_options() {
+  /**
+   * Get a copy of the saved settings array. 
+   */
+  $saved_settings = get_option( 'option_tree_settings', array() );
+  
+  /**
+   * Custom settings array that will eventually be 
+   * passes to the OptionTree Settings API Class.
+   */
+  $custom_settings = array( 
+    'contextual_help' => array( 
+      'content'       => array( 
+        array(
+          'id'        => 'general_help',
+          'title'     => 'General',
+          'content'   => '<p>Help content goes here!</p>'
+        ),
+        array(
+          'id'        => 'social_network',
+          'title'     => 'Social Network',
+          'content'   => '<p>social network content goes here!</p>'
+        )
+      ),
+      'sidebar'       => '<p>Sidebar content goes here!</p>'
+    ),
+    'sections'        => array( 
+      array(
+        'id'          => 'general',
+        'title'       => __( 'General Options', 'thirtyone' )
+      ),
+      array(
+        'id'          => 'social_network',
+        'title'       => __( 'Social-Network', 'thirtyone' )
+      ),
+      array(
+        'id'          => 'styling_options',
+        'title'       => __( 'Styling Options', 'thirtyone' )
+      ),
+      array(
+        'id'          => 'thirtyone_mobile_mode',
+        'title'       => __( 'Mobile Options', 'thirtyone' )
+      ),
+      array(
+        'id'          => 'thirtyone_portfolio_options',
+        'title'       => __( 'Portfolio Options', 'thirtyone' )
+      ),
+      array(
+        'id'          => 'thirtyone_slideshow',
+        'title'       => __( 'Slideshow Options', 'thirtyone' )
+      ),
+      array(
+        'id'          => 'thirtyone_senior',
+        'title'       => __( 'Senior Options', 'thirtyone' )
+      )
+    ),
+    'settings'        => array( 
+      array(
+        'id'          => 'thirtyone_custom_logo',
+        'label'       => __( 'Custom Logo', 'thirtyone' ),
+        'desc'        => __( 'Upload a custom logo image.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'general',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_plain_text_logo',
+        'label'       => __( 'Plain Text Logo', 'thirtyone' ),
+        'desc'        => __( 'Using plain text instead of image logo.', 'thirtyone' ),
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'section'     => 'general',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'choices'     => '',
+      ),
+      array(
+        'id'          => 'thirtyone_site_description',
+        'label'       => __( 'Site Description', 'thirtyone' ),
+        'desc'        => __( 'Display or Hide the site description.', 'thirtyone' ),
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'general',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'choices'     => '',
+      ),
+      array(
+        'id'          => 'thirtyone_social_list',
+        'label'       => __( 'Social Network List', 'thirtyone' ),
+        'desc'        => __( 'Display or Hide the Social Network list.', 'thirtyone' ),
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'general',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'choices'     => '',
+      ),
+      array(
+        'id'          => 'thirtyone_header_search',
+        'label'       => __( 'Header Search Form', 'thirtyone' ),
+        'desc'        => __( 'Display or Hide the Header Search Form.', 'thirtyone' ),
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'general',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'choices'     => '',
+      ),
+      array(
+        'id'          => 'thirtyone_dimox_breadcrumbs',
+        'label'       => __( 'Breadcrumbs', 'thirtyone' ),
+        'desc'        => __( 'Display or Hide the Header Breadcrumbs', 'thirtyone' ),
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'general',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'choices'     => '',
+      ),
+      array(
+        'id'          => 'thirtyone_favicon',
+        'label'       => __( 'Custom Favicon icon', 'thirtyone' ),
+        'desc'        => __( 'Upload a custom Favicon icon', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'general',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_login_logo',
+        'label'       => __( 'Custom Login Logo Upload', 'thirtyone' ),
+        'desc'        => __( 'Upload a custom login logo', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'general',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_contact_email',
+        'label'       => __( 'Contact Form Email', 'thirtyone' ),
+        'desc'        => __( 'Input the Contact Form Email Address', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'general',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_prompt',
+        'label'       => __( 'Prompt Banner', 'thirtyone' ),
+        'desc'        => __( 'Display or Hide the Header Prompt Banner', 'thirtyone' ),
+        'std'         => 'on',
+        'type'        => 'on-off',
+        'section'     => 'general',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'choices'     => '',
+      ),
+      array(
+        'id'          => 'thirtyone_prompt_content',
+        'label'       => __( 'Prompt Banner Content', 'thirtyone' ),
+        'desc'        => __( 'Input the Prompt Banner Content', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'general',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_copyright',
+        'label'       => __( 'Copyright', 'thirtyone' ),
+        'desc'        => __( 'Site Copyright on the footer.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'general',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_icp_id',
+        'label'       => __( 'icp id', 'thirtyone' ),
+        'desc'        => __( 'China icp id.', 'thirtyone' ),
+        'std'         => 'ICP-14007437',
+        'type'        => 'text',
+        'section'     => 'general',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_sns_facebook',
+        'label'       => __( 'Facebook', 'thirtyone' ),
+        'desc'        => __( 'Follow us on facebook.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'social_network',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => 'sns_facebook_option'
+      ),
+      array(
+        'id'          => 'thirtyone_sns_twitter',
+        'label'       => __( 'Twitter', 'thirtyone' ),
+        'desc'        => __( 'Follow us on twitter.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'social_network',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_sns_googleplus',
+        'label'       => __( 'Googleplus', 'thirtyone' ),
+        'desc'        => __( 'Follow us on Googleplus.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'social_network',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_sns_linkedin',
+        'label'       => __( 'LinkedIn', 'thirtyone' ),
+        'desc'        => __( 'Follow us on LinkedIn.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'social_network',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_sns_tumblr',
+        'label'       => __( 'Tumblr', 'thirtyone' ),
+        'desc'        => __( 'Follow us on Tumblr.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'social_network',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_sns_flickr',
+        'label'       => __( 'Flickr', 'thirtyone' ),
+        'desc'        => __( 'Follow us on Flickr.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'social_network',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_sns_sina_weibo',
+        'label'       => __( 'Weibo', 'thirtyone' ),
+        'desc'        => __( 'Follow us on Sina WeiBo.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'social_network',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_sns_weixin',
+        'label'       => __( 'Weixin', 'thirtyone' ),
+        'desc'        => __( 'Follow us on Weixin.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'social_network',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_sns_dribbble',
+        'label'       => __( 'Dribbble', 'thirtyone' ),
+        'desc'        => __( 'Follow us on Dribbble.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'social_network',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_sns_rss',
+        'label'       => 'RSS',
+        'desc'        => 'RSS',
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'social_network',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_sns_email',
+        'label'       => __( 'Email', 'thirtyone' ),
+        'desc'        => __( 'Contact us with Email', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'text',
+        'section'     => 'social_network',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_social_links',
+        'label'       => __( 'Social Links', 'thirtyone' ),
+        'desc'        => '<p>' . sprintf( __( 'The Social Links option type utilizes a drag & drop interface to create a list of social links. There are a few filters that make extending this option type easy. You can set the %s filter to %s and turn off loading default values. Use the %s filter to change the default values that are loaded. To filter the settings array use the %s filter.', 'theme-text-domain' ), '<code>ot_type_social_links_load_defaults</code>', '<code>false</code>', '<code>ot_type_social_links_defaults</code>', '<code>ot_social_links_settings</code>' ) . '</p>',
+        'std'         => '',
+        'type'        => 'social-links',
+        'section'     => 'social_network',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'min_max_step'=> '',
+        'class'       => '',
+        'condition'   => '',
+        'operator'    => 'and'
+      ),
+      array(
+        'id'          => 'thirtyone_layout',
+        'label'       => __( 'Layout', 'thirtyone' ),
+        'desc'        => __( 'Choose a layout for your theme', 'thirtyone' ),
+        'std'         => 'right-sidebar',
+        'type'        => 'radio-image',
+        'section'     => 'styling_options',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'choices'     => array( 
+          array(
+            'value'       => 'layout-2cl',
+            'label'       => __( 'Left Sidebar', 'thirtyone' ),
+            'src'         => THIRTYONE_URL . '/images/2cl.png'
+          ),
+          array(
+            'value'       => 'layout-2cr',
+            'label'       => __( 'Right Sidebar', 'thirtyone' ),
+            'src'         => THIRTYONE_URL . '/images/2cr.png'
+          ),
+          array(
+            'value'       => 'layout-1cm',
+            'label'       => __( 'Full Width (no sidebar)', 'thirtyone' ),
+            'src'         => THIRTYONE_URL . '/images/1cm.png'
+          )
+        ),
+      ),
+      array(
+        'id'          => 'thirtyone_google_fonts',
+        'label'       => __( 'Google web fonts', 'thirtyone' ),
+        'desc'        => __( 'A web with web fonts is more beautiful, readable, accessible.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'typography',
+        'section'     => 'styling_options',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_header_bg',
+        'label'       => __( 'Header background', 'thirtyone' ),
+        'desc'        => __( 'To change the header background.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'background',
+        'section'     => 'styling_options',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => 'thirtyone_header_bg'
+      ),
+      array(
+        'id'          => 'thirtyone_background',
+        'label'       => __( 'Theme Background', 'thirtyone' ),
+        'desc'        => __( 'To change the website background', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'background',
+        'section'     => 'styling_options',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'customize_css',
+        'label'       => __( 'Customize CSS', 'thirtyone' ),
+        'desc'        => __( 'Customize CSS Style', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'css',
+        'section'     => 'styling_options',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_response_switch',
+        'label'       => __( 'Response Switch', 'thirtyone' ),
+        'desc'        => __( 'Enable or Disable the Response Web for Mobile device.', 'thirtyone' ),
+        'std'         => 'off',
+        'type'        => 'on-off',
+        'section'     => 'thirtyone_mobile_mode',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'choices'     => '',
+      ),
+      array(
+        'id'          => 'thirtyone_touch_icon_iphone',
+        'label'       => __( 'Touch Icon (iPhone)', 'thirtyone' ),
+        'desc'        => __( 'iphone: sizes="57x57"; iphone-retina: sizes="144x144"', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'thirtyone_mobile_mode',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_touch_icon_ipad',
+        'label'       => __( 'Touch Icon (iPad)', 'thirtyone' ),
+        'desc'        => __( 'ipad,sizes="72x72"; ipad-retina, sizes="144x144"', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'thirtyone_mobile_mode',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_apple_touch_startup_image',
+        'label'       => __( 'Startup Image', 'thirtyone' ),
+        'desc'        => __( 'iOS splash screen: iPhone : 320x460; iPhone retina : 640x920; iPhone 5 retina : 640x1096; iPad portrait : 768x1004; iPad retina portrait : 1536x2008; iPad landscape : 748x1024; iPad retina landscape : 1496x2048;', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'upload',
+        'section'     => 'thirtyone_mobile_mode',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_apple_mobile_web_app_capable',
+        'label'       => __( 'apple mobile web app capable', 'thirtyone' ),
+        'desc'        => __( 'Sets whether a web application runs in full-screen mode.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'radio',
+        'section'     => 'thirtyone_mobile_mode',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'choices'     => array( 
+          array(
+            'value'       => 'yes',
+            'label'       => 'Yes',
+            'src'         => ''
+          ),
+          array(
+            'value'       => 'no',
+            'label'       => 'No',
+            'src'         => ''
+          )
+        ),
+      ),
+      array(
+        'id'          => 'thirtyone_apple_mobile_web_app_status_bar_style', //apple-mobile-web-app-status-bar-style
+        'label'       => __( 'apple mobile web app status bar style', 'thirtyone' ),
+        'desc'        => __( 'Sets the style of the status bar for a web application.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'radio',
+        'section'     => 'thirtyone_mobile_mode',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'choices'     => array( 
+          array(
+            'value'       => 'default',
+            'label'       => 'default',
+            'src'         => ''
+          ),
+          array(
+            'value'       => 'black',
+            'label'       => 'black',
+            'src'         => ''
+          ),
+          array(
+            'value'       => 'black-translucent',
+            'label'       => 'black-translucent',
+            'src'         => ''
+          )
+        ),
+      ),
+      array(
+        'id'          => 'thirtyone_portfolio_columns',
+        'label'       => __( 'Portfolio Columns', 'thirtyone' ),
+        'desc'        => __( 'The columns number of Portfolio page.', 'thirtyone' ),
+        'std'         => 'three columns',
+        'type'        => 'radio-image',
+        'section'     => 'thirtyone_portfolio_options',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'choices'     => array( 
+          array(
+            'value'       => 'one-column',
+            'label'       => __( 'One Column', 'thirtyone' ),
+            'src'         => THIRTYONE_URL . '/images/p-1c.png'
+          ),
+          array(
+            'value'       => 'two-columns',
+            'label'       => __( 'Two Columns', 'thirtyone' ),
+            'src'         => THIRTYONE_URL . '/images/p-2c.png'
+          ),
+          array(
+            'value'       => 'three-columns',
+            'label'       => __( 'Three Columns', 'thirtyone' ),
+            'src'         => THIRTYONE_URL . '/images/p-3c.png'
+          ),
+          array(
+            'value'       => 'four-columns',
+            'label'       => __( 'Four Columns', 'thirtyone' ),
+            'src'         => THIRTYONE_URL . '/images/p-4c.png'
+          )
+        ),
+      ),
+      array(
+        'id'          => 'thirtyone_portfolio_number_pre_page',
+        'label'       => __( 'Numbers pre page', 'thirtyone' ),
+        'desc'        => __( 'The post numbers pre page.', 'thirtyone' ),
+        'std'         => '12',
+        'type'        => 'text',
+        'section'     => 'thirtyone_portfolio_options',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_ot_my_slider',
+        'label'       => __( 'Focus Images Slider', 'thirtyone' ),
+        'desc'        => __( 'Focus Images Slider', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'slider',
+        'section'     => 'thirtyone_slideshow',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+        'id'          => 'thirtyone_freebies_slider',
+        'label'       => __( 'freebies Images Slider', 'thirtyone' ),
+        'desc'        => __( 'freebies Images Slider', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'slider',
+        'section'     => 'thirtyone_slideshow',
+        'rows'        => '',
+        'post_type'   => 'freebies',
+        'taxonomy'    => '',
+        'class'       => ''
+      ),
+      array(
+      		'id'          => 'thirtyone_seo_robots_index_setting',
+      		'label'       => __( 'Robots index Setting', 'thirtyone' ),
+      		'desc'        => __( 'If you don not want to host jQuery yourself, you can include it from a google CDN (Content Delivery Network).', 'thirtyone' ),
+      		'std'         => 'on',
+      		'type'        => 'on-off',
+      		'section'     => 'thirtyone_senior',
+      		'rows'        => '',
+      		'post_type'   => '',
+      		'taxonomy'    => '',
+      		'class'       => 'thirtyone_robots_setting',
+      		'choices'     => ''
+      ),
+      array(
+      		'id'          => 'thirtyone_seo_robots_follow_setting',
+      		'label'       => __( 'Robots follow Setting', 'thirtyone' ),
+      		'desc'        => __( 'If you don not want to host jQuery yourself, you can include it from a google CDN (Content Delivery Network).', 'thirtyone' ),
+      		'std'         => 'on',
+      		'type'        => 'on-off',
+      		'section'     => 'thirtyone_senior',
+      		'rows'        => '',
+      		'post_type'   => '',
+      		'taxonomy'    => '',
+      		'class'       => 'thirtyone_robots_setting',
+      		'choices'     => ''
+      ),
+      array(
+      		'id'          => 'thirtyone_google_jquery',
+      		'label'       => __( 'Google jquery', 'thirtyone' ),
+      		'desc'        => __( 'If you don not want to host jQuery yourself, you can include it from a google CDN (Content Delivery Network).', 'thirtyone' ),
+      		'std'         => 'off',
+      		'type'        => 'on-off',
+      		'section'     => 'thirtyone_senior',
+      		'rows'        => '',
+      		'post_type'   => '',
+      		'taxonomy'    => '',
+      		'class'       => '',
+      		'choices'     => '',
+      ),
+      array(
+        'id'          => 'thirtyone_sidebar_select',
+        'label'       => __( 'Sidebar Select', 'thirtyone' ),
+        'desc'        => '<p>' . sprintf(  __( 'This option type makes it possible for users to select a WordPress registered sidebar to use on a specific area. By using the two provided filters, %s, and %s we can be selective about which sidebars are available on a specific content area.', 'theme-text-domain' ), '<code>ot_recognized_sidebars</code>', '<code>ot_recognized_sidebars_{$field_id}</code>' ) . '</p><p>' . sprintf( __( 'For example, if we create a WordPress theme that provides the ability to change the Blog Sidebar and we don\'t want to have the footer sidebars available on this area, we can unset those sidebars either manually or by using a regular expression if we have a common name like %s.', 'theme-text-domain' ), '<code>footer-sidebar-$i</code>' ) . '</p>',
+        'std'         => '',
+        'type'        => 'sidebar-select',
+        'section'     => 'thirtyone_senior',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'min_max_step'=> '',
+        'class'       => '',
+        'condition'   => '',
+        'operator'    => 'and'
+      ),
+      array(
+        'id'          => 'thirtyone_tracking_code',
+        'label'       => __( 'Tracking Code', 'thirtyone' ),
+        'desc'        => __( 'Paste your Google Analytics (or other) tracking code here. It will be inserted before the closing body tag of your theme.', 'thirtyone' ),
+        'std'         => '',
+        'type'        => 'textarea-simple',
+        'section'     => 'thirtyone_senior',
+        'rows'        => '',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => ''
+      )
+    )
+  );
+  
+  /* allow settings to be filtered before saving */
+  $custom_settings = apply_filters( 'option_tree_settings_args', $custom_settings );
+  
+  /* settings are not the same update the DB */
+  if ( $saved_settings !== $custom_settings ) {
+    update_option( 'option_tree_settings', $custom_settings ); 
+  }
+  
+}

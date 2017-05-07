@@ -1,0 +1,909 @@
+<?php
+
+/**
+ * Option-tree framework
+ */
+
+/**
+ * Thirty One functions and definitions
+ *
+ * @package Thirty One
+ * @since Thirty One 1.0
+ *       
+ */
+
+/**
+ * Tell WordPress to run thirtyone_setup() when the 'after_setup_theme' hook is
+ * run.
+ */
+
+
+if (! function_exists ( 'thirtyone_setup' )) :
+	/**
+	 *
+	 * @uses load_theme_textdomain() For translation/localization support.
+	 * @uses add_editor_style() To style the visual editor.
+	 * @uses add_theme_support() To add support for post thumbnails, automatic
+	 *       feed links, and Post Formats.
+	 * @uses register_nav_menus() To add support for navigation menus.
+	 * @uses add_custom_logo() To add support for a custom logo.
+	 * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
+	 *      
+	 * @since Thirty One 1.0
+	 */
+	function thirtyone_setup() {
+		
+		/*
+		 * Make Thirty One available for translation. Translations can be added
+		 * to the /languages/ directory. If you're building a theme based on
+		 * Thirty One, use a find and replace to change 'thirtyone' to the name
+		 * of your theme in all the template files.
+		 */
+		load_theme_textdomain ( 'thirtyone', get_template_directory () . '/languages' );
+		
+		$locale = get_locale ();
+		$locale_file = TEMPLATEPATH . "/languages/$locale.php";
+		if (is_readable ( $locale_file ))
+			require_once ($locale_file);
+			
+			// This theme styles the visual editor with editor-style.css to
+		// match the theme style.
+		add_editor_style ();
+		
+		// Add default posts and comments RSS feed links to <head>.
+		add_theme_support ( 'automatic-feed-links' );
+		
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menu ( 'primary', __ ( 'Primary Menu', 'thirtyone' ) );
+		register_nav_menu ( 'footer', __ ( 'Footer Menu', 'thirtyone' ) );
+		
+		// Add support for a variety of post formats
+		add_theme_support ( 'post-formats', array ('aside', 'link', 'gallery', 'status', 'quote', 'image', 'audio', 'video' ) );
+		
+		add_post_type_support ();
+		
+		// This theme uses Featured Images (also known as post thumbnails) for
+		// per-post/per-page Custom Header images
+		add_theme_support ( 'post-thumbnails' );
+		
+		// Add Thirty One's custom image sizes
+		add_image_size ( 'feature_large', 940, '', true ); // Used for large feature (header) images
+		add_image_size ( 'feature_medium', 660, 330, true ); // for use on blog pages
+		add_image_size ( 'feature_half', 460, 230, true ); // two columns
+		add_image_size ( 'feature_small', 300, 150, true ); // Used for featured  posts if a thumbnail_one doesn't exist
+		add_image_size ( 'feature_fourth', 220, 110, true ); // four columns
+		
+		add_image_size ( 'feature_book', 150, 200, true ); // For Books post type
+		                                                   
+		// thumbnail_one:
+		//add_image_size ( 'thumbnail_one', 940, 470, true ); // one column
+		//add_image_size ( 'thumbnail_two', 460, 230, true ); // two columns
+		//add_image_size ( 'thumbnail_three', 300, 150, true ); // three columns
+		//add_image_size ( 'thumbnail_four', 220, 110, true ); // four columns
+	
+	}
+	
+	add_action ( 'after_setup_theme', 'thirtyone_setup' );
+
+endif; // thirtyone_setup
+
+/**
+ * Set the content width based on the theme's design and stylesheet.
+ * It¡¯s also used by Wordpress post edit content width.
+ */
+if (! isset ( $content_width ))
+	$content_width = 700;
+
+	/**
+ * Sets the post excerpt length to 40 words.
+ *
+ * To override this length in a child theme, remove the filter and add your own
+ * function tied to the excerpt_length filter hook.
+ */
+function thirtyone_excerpt_length($length) {
+	return 140;
+}
+add_filter ( 'excerpt_length', 'thirtyone_excerpt_length' );
+
+/**
+ * Returns a "Read More" link for excerpts
+ */
+function thirtyone_continue_reading_link() {
+	return ' <a class="more-link icon-more" href="' . esc_url ( get_permalink () ) . '">' . __ ( 'Read More', 'thirtyone' ) . '</a>';
+}
+
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with an
+ * ellipsis and thirtyone_continue_reading_link().
+ *
+ * To override this in a child theme, remove the filter and add your own
+ * function tied to the excerpt_more filter hook.
+ */
+function thirtyone_auto_excerpt_more($more) {
+	return ' &hellip;' . thirtyone_continue_reading_link ();
+}
+add_filter ( 'excerpt_more', 'thirtyone_auto_excerpt_more' );
+
+
+
+/**
+ * Adds a pretty "Read More" link to custom post excerpts.
+ *
+ * To override this link in a child theme, remove the filter and add your own
+ * function tied to the get_the_excerpt filter hook.
+ */
+function thirtyone_custom_excerpt_more($output) {
+	if (has_excerpt () && ! is_attachment ()) {
+		$output .= thirtyone_continue_reading_link ();
+	}
+	return $output;
+}
+add_filter ( 'get_the_excerpt', 'thirtyone_custom_excerpt_more' );
+
+
+
+/**
+ * Make the page support the excerpt.
+ */
+function thirtyone_page_support_excerpt() {
+	add_post_type_support( 'page', 'excerpt' );
+}
+add_action('init', 'thirtyone_page_support_excerpt');
+
+
+
+/**
+ * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
+ */
+function thirtyone_page_menu_args($args) {
+	$args ['show_home'] = true;
+	return $args;
+}
+add_filter ( 'wp_page_menu_args', 'thirtyone_page_menu_args' );
+
+/**
+ * Register our sidebars and widgetized areas.
+ * Also register the default Epherma widget.
+ *
+ * @since Thirty One 1.0
+ */
+function thirtyone_widgets_init() {
+	
+
+	register_widget ( 'Thirty_One_Ephemera_Widget' );
+	register_widget ( 'Thirty_One_Widget_Recent_Comments' );
+	register_widget ( 'Thirty_One_Widget_Recent_Posts' );
+	register_widget ( 'Thirty_One_Widget_Pop_Posts' );
+	register_widget ( 'Thirty_One_Flickr_Widget' );
+	register_widget ( 'Thirty_One_MostLikedPosts' );
+	
+	register_sidebar ( array ('name' => __ ( 'Main Sidebar', 'thirtyone' ), 'id' => 'sidebar-1', 'before_widget' => '<aside id="%1$s" class="widget %2$s">', 'after_widget' => "</aside>", 'before_title' => '<div class="widget-title-bg"><h4 class="widget-title">', 'after_title' => '</h4></div>' ) );
+	register_sidebar ( array ('name' => __ ( 'Sidebar Area two', 'thirtyone' ), 'id' => 'sidebar-6', 'description' => __ ( 'Another optional widget area for your site sidebar', 'thirtyone' ), 'before_widget' => '<aside id="%1$s" class="widget %2$s">', 'after_widget' => "</aside>", 'before_title' => '<div class="widget-title-bg"><h4 class="widget-title">', 'after_title' => '</h4></div>' ) );
+	register_sidebar ( array ('name' => __ ( 'Footer Area One', 'thirtyone' ), 'id' => 'sidebar-3', 'description' => __ ( 'An optional widget area for your site footer', 'thirtyone' ), 'before_widget' => '<aside id="%1$s" class="widget %2$s">', 'after_widget' => "</aside>", 'before_title' => '<div class="widget-title-bg"><h4 class="widget-title">', 'after_title' => '</h4></div>' ) );
+	register_sidebar ( array ('name' => __ ( 'Footer Area Two', 'thirtyone' ), 'id' => 'sidebar-4', 'description' => __ ( 'An optional widget area for your site footer', 'thirtyone' ), 'before_widget' => '<aside id="%1$s" class="widget %2$s">', 'after_widget' => "</aside>", 'before_title' => '<div class="widget-title-bg"><h4 class="widget-title">', 'after_title' => '</h4></div>' ) );
+	register_sidebar ( array ('name' => __ ( 'Footer Area Three', 'thirtyone' ), 'id' => 'sidebar-5', 'description' => __ ( 'An optional widget area for your site footer', 'thirtyone' ), 'before_widget' => '<aside id="%1$s" class="widget %2$s">', 'after_widget' => "</aside>", 'before_title' => '<div class="widget-title-bg"><h4 class="widget-title">', 'after_title' => '</h4></div>' ) );
+	register_sidebar ( array ('name' => __ ( 'Books Channel', 'thirtyone' ), 'id' => 'sidebar-7', 'description' => __ ( 'An optional widget area for Books Channel Archives', 'thirtyone' ), 'before_widget' => '<aside id="%1$s" class="widget %2$s">', 'after_widget' => "</aside>", 'before_title' => '<div class="widget-title-bg"><h4 class="widget-title">', 'after_title' => '</h4></div>' ) );
+	}
+add_action ( 'widgets_init', 'thirtyone_widgets_init' );
+
+
+
+if (! function_exists ( 'thirtyone_js_css_includes' )) {
+	function thirtyone_js_css_includes() {
+		
+		// css
+		wp_register_style ( 'phone', get_template_directory_uri () . '/inc/css/phone.css', '', '1.0' );
+		wp_register_style ( 'tablet', get_template_directory_uri () . '/inc/css/tablet.css', '', '1.0' );
+		wp_register_style ( 'jplayer_css', get_template_directory_uri () . '/inc/css/jplayer.css' );
+		wp_register_style ( 'lightbox_css', get_template_directory_uri () . '/inc/css/lightbox.css' );
+		wp_register_style ( '960_12_col', get_template_directory_uri () . '/inc/css/960_12_col.css', '', '1.0' );
+		//wp_register_style( 'icomoon', get_template_directory_uri() . '/icomoon_style.css', array(), '0.0.1' );
+		wp_register_style( 'thirtyjin_font', get_template_directory_uri() . '/thirtyjin_font.css', array(), '0.1.0' );
+		
+		
+		wp_register_style( 'template_home', get_template_directory_uri() . '/style-home.css', array(), '0.0.1' );
+		wp_register_style( 'nprogress', get_template_directory_uri() . '/nprogress.css', array(), '0.0.1' );	
+		wp_register_style( 'shCore_css', get_template_directory_uri() . '/inc/css/shCore.css', array(), '3.0.83' );
+		wp_register_style( 'shCoreDefault_css', get_template_directory_uri() . '/inc/css/shCoreDefault.css', array(), '3.0.83' );
+		wp_register_style( 'shThemeThirtyOne_css', get_template_directory_uri() . '/inc/css/shThemeThirtyOne.css', array(), '3.0.83' );
+		wp_register_style( 'animate_css', get_template_directory_uri() . '/inc/css/animate.css', array(), '', '1.0' );
+		
+		// js
+		wp_register_script ( 'jquery_min', get_template_directory_uri () . '/js/jquery-1.10.2.min.js', array ('jquery' ), '1.10.2' );
+		wp_register_script ( 'google_jquery_min', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array ('jquery' ), '1.10.2' );
+		wp_register_script ( 'thirtyone_custom_js', get_template_directory_uri () . '/js/thirtyone_custom.js', array ('jquery' ), '1.0' );
+		wp_register_script ( 'jquery_cookie_min_js', get_template_directory_uri () . '/js/jquery.cookie.min.js', array ('jquery' ), '2.1.0' );
+		wp_register_script ( 'jquery_easing_js', get_template_directory_uri () . '/js/jquery.easing.1.3.js', array ('jquery' ), '1.3' );
+		wp_register_script ( 'jquery_isotope_min_js', get_template_directory_uri () . '/js/isotope.pkgd.min.js', array ('jquery' ), '2.0.0', false );		
+		wp_register_script ( 'jquery_jplayer_min_js', get_template_directory_uri () . '/js/jquery.jplayer.min.js', array ('jquery' ), '2.1.0' );
+		wp_register_script ( 'likesScript', get_template_directory_uri () . '/js/thirty_likesScript.js', array ('jquery' ), '1.0' );
+		wp_register_script ( 'jquery_validation', get_template_directory_uri () . '/js/jquery.validate.min.js', array ('jquery' ), '1.9', true );
+		wp_register_script ( 'jquery_carouFredSel', get_template_directory_uri () . '/js/jquery.carouFredSel.min.js', array ('jquery' ), '6.2.1' );
+		wp_register_script ( 'jquery_touchSwipe_min', get_template_directory_uri () . '/js/jquery.touchSwipe.min.js', array ('jquery' ), '1.3.3', true );
+		wp_register_script ( 'jquery_stellar_min', get_template_directory_uri () . '/js/jquery.stellar.min.js', array ('jquery' ), '0.6.2', true );
+		wp_register_script ( 'jquery_sticky', get_template_directory_uri () . '/js/jquery.sticky.js', array ('jquery' ), '1.0', true );
+		wp_register_script ( 'retina_js', get_template_directory_uri () . '/js/jquery.retina.min.js', array ('jquery' ), '1.1.0', true );
+		wp_register_script ( 'nprogress', get_template_directory_uri () . '/js/nprogress.js', array ('jquery' ), '0.1.2', false );
+		wp_register_script ( 'poshytip', get_template_directory_uri () . '/js/jquery.poshytip.min.js', array ('jquery' ), '1.2', false );
+		
+		wp_register_script ( 'baidu_map_js', get_template_directory_uri () . '/js/baidu_map.js', '', '', true );
+		wp_register_script ( 'google_map_js', get_template_directory_uri () . '/js/google_map.js', '', '', true );
+		
+		wp_register_script ( 'waypoints_js', get_template_directory_uri () . '/js/waypoints.min.js', array ('jquery' ), '1.6.2', false );
+		
+		wp_register_script ( 'shCore_js', get_template_directory_uri () . '/inc/js/shCore.js', false , '3.0.83', false );
+		wp_register_script ( 'shBrushJScript_js', get_template_directory_uri () . '/inc/js/shBrushJScript.js', false , '3.0.83', false );
+		wp_register_script ( 'shBrushCss_js', get_template_directory_uri () . '/inc/js/shBrushCss.js', false , '3.0.83', false );
+		
+		
+		// queue
+		$thirtyone_response_switch = ot_get_option ( 'thirtyone_response_switch' );
+		if ($thirtyone_response_switch =='on') {
+			// turn on the responsive web design on iphone and ipad.
+			wp_enqueue_style ( 'phone' );
+			wp_enqueue_style ( 'tablet' );
+		} else {
+			// turn off the responsive.
+			wp_dequeue_style ( 'phone' );
+			wp_dequeue_style ( 'tablet' );
+		}
+		
+		wp_enqueue_style ( 'slides_css' );
+		wp_enqueue_style ( 'jplayer_css' );
+		wp_enqueue_style ( '960_12_col' );
+		//wp_enqueue_style( 'icomoon' ); // Add icomoon font, used in the main stylesheet.
+		wp_enqueue_style( 'thirtyjin_font' ); // 
+		
+		wp_enqueue_style( 'template_home' ); // only for home template style.
+		wp_enqueue_style( 'nprogress' ); // for loading bar.
+		wp_enqueue_style( 'animate_css' ); 
+		
+		wp_enqueue_style( 'shCore_css' );
+		wp_enqueue_style( 'shCoreDefault_css' );
+		wp_enqueue_style( 'shThemeThirtyOne_css' );
+		
+		
+		$thirtyone_google_jquery = ot_get_option ( 'thirtyone_google_jquery' );
+		if ($thirtyone_google_jquery =='on') {
+			wp_enqueue_script ( 'google_jquery_min' );
+		} else {
+			wp_enqueue_script ( 'jquery_min' );
+		}
+		
+		//wp_enqueue_script ( 'jquery_lazyload_min_js' );
+		wp_enqueue_script ( 'jquery_cookie_min_js' );
+		wp_enqueue_script ( 'jquery_carouFredSel' );
+		wp_enqueue_script ( 'jquery_touchSwipe_min' );
+		//wp_enqueue_script ( 'jquery_isotope_min_js' ); // add in the archive-portfolio.php
+		//wp_enqueue_script ( 'jquery_jplayer_min_js' );
+		wp_enqueue_script ( 'jquery_easing_js' );
+		//wp_enqueue_script ( 'jquery_lightbox' );
+		wp_enqueue_script ( 'jquery_validation' );
+		wp_enqueue_script ( 'jquery_stellar_min' ); // Parallax stellar.js
+		wp_enqueue_script ( 'jquery_sticky' ); // fixed maneu bar
+		wp_enqueue_script ( 'retina_js' ); // Enqueueing retina.js
+		wp_enqueue_script ( 'nprogress' ); // loading bar
+		wp_enqueue_script ( 'poshytip' ); // hover image tooltips
+		wp_enqueue_script ( 'waypoints_js' ); // 
+
+		wp_enqueue_script ( 'likesScript' );
+		wp_enqueue_script ( 'thirtyone_custom_js' );
+		
+		wp_enqueue_script ( 'shCore_js' ); // loading bar
+		wp_enqueue_script ( 'shBrushJScript_js' ); // loading bar
+		wp_enqueue_script ( 'shBrushCss_js' ); // loading bar
+		
+		
+		
+		if (is_singular () && get_option ( 'thread_comments' ))
+			wp_enqueue_script ( 'comment-reply' ); // loads
+			                                                                                             // the
+			                                                                                              // comments
+				                                                                                             
+		// if( is_page_template('template-contact.php') )
+			                                                                                             // wp_enqueue_script('jquery_validation');
+	
+	} // END. thirtyone_js_css_includes
+
+}
+
+add_action ( 'wp_enqueue_scripts', 'thirtyone_js_css_includes' );
+
+/*
+ *
+ * -----------------------------------------------------------------------------------
+ */
+/*	Register and load admin javascript
+ /*-----------------------------------------------------------------------------------*/
+
+if (! function_exists ( 'thirtyjin_enqueue_admin_scripts' )) {
+	function thirtyjin_enqueue_admin_scripts() {
+		wp_register_script ( 'thirtyjin-admin', get_template_directory_uri () . '/inc/js/jquery.custom.admin.js', 'jquery' );
+		wp_enqueue_script ( 'thirtyjin-admin' );
+	}
+}
+add_action ( 'admin_enqueue_scripts', 'thirtyjin_enqueue_admin_scripts' );
+
+
+
+if ( ! function_exists( 'thirtyone_paging_nav' ) ) :
+/**
+ * To add pagination to your search results and archives.
+*
+* @since Thirtyone 1.0
+*
+* @return void
+*/
+function thirtyone_paging_nav() { ?>
+	
+	<div class="grid_12 page-nav navigation paging-navigation" role="navigation">
+	<?php global $wp_query;
+	$big = 999999999; // need an unlikely integer
+	$args = array(
+			'base'         => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+			'format'       => '?page=%#%',
+			'total'        => $wp_query->max_num_pages ,
+			'current'      => max( 1, get_query_var('paged')),
+			'show_all'     => False,
+			'end_size'     => 1,
+			'mid_size'     => 2
+	);
+
+	echo paginate_links( $args );
+	
+	?>
+	</div><!-- End .navigation -->
+	<?php
+}
+endif;
+
+
+/**
+ * Display navigation to next/previous loop pages when applicable
+ */
+function thirtyone_content_nav($nav_id) {
+	global $wp_query;
+	if ($wp_query->max_num_pages > 1) : ?>
+	<nav class="navigation post-navigation"  id="<?php echo $nav_id; ?>">
+		<span class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'thirtyone' ) ); ?></span>
+		<span class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'thirtyone' ) ); ?></span>
+	</nav>
+	<?php endif;
+}
+
+
+
+
+/**
+ * Display navigation to next/previous single post when applicable
+ */
+function thirtyone_single_nav() { ?>
+	
+	<postnav id="nav-single">
+		<span class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'thirtyone' ) ); ?></span>
+		<span class="nav-next"><?php next_post_link( '%link', '%title' ); ?></span>
+	</postnav>
+	<!-- #nav-single -->
+<?php }
+
+
+
+/**
+ * Return the URL for the first link found in the post content.
+ *
+ * @since Thirty One 1.0
+ * @return string bool or false when no link is present.
+ */
+function thirtyone_url_grabber() {
+	if (! preg_match ( '/<a\s[^>]*?href=[\'"](.+?)[\'"]/is', get_the_content (), $matches ))
+		return false;
+	
+	return esc_url_raw ( $matches [1] );
+}
+
+/**
+ * Count the number of footer sidebars to enable dynamic classes for the footer
+ */
+function thirtyone_footer_sidebar_class() {
+	$count = 0;
+	
+	if (is_active_sidebar ( 'sidebar-3' ))
+		$count ++;
+	
+	if (is_active_sidebar ( 'sidebar-4' ))
+		$count ++;
+	
+	if (is_active_sidebar ( 'sidebar-5' ))
+		$count ++;
+	
+	$class = '';
+	
+	switch ($count) {
+		case '1' :
+			$class = 'one';
+			break;
+		case '2' :
+			$class = 'two';
+			break;
+		case '3' :
+			$class = 'three';
+			break;
+	}
+	
+	if ($class)
+		echo 'class="' . $class . '"';
+}
+
+if (! function_exists ( 'thirtyone_comment' )) :
+	/**
+	 * Template for comments and pingbacks.
+	 *
+	 * To override this walker in a child theme without modifying the comments
+	 * template
+	 * simply create your own thirtyone_comment(), and that function will be
+	 * used instead.
+	 *
+	 * Used as a callback by wp_list_comments() for displaying the comments.
+	 *
+	 * @since Thirty One 1.0
+	 */
+	function thirtyone_comment($comment, $args, $depth) {
+		$GLOBALS ['comment'] = $comment;
+		switch ($comment->comment_type) :
+			case 'pingback' :
+			case 'trackback' :
+				?>
+<li class="post pingback">
+	<p><?php _e( 'Pingback:', 'thirtyone' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'thirtyone' ), '<span class="edit-link">', '</span>' ); ?></p>
+	<?php
+				break;
+			default :
+				?>
+	
+<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+	<article id="comment-<?php comment_ID(); ?>" class="comment">
+		<div class="comment-meta">
+			<div class="comment-author vcard">
+					<?php
+				$avatar_size = 68;
+				if ('0' != $comment->comment_parent)
+					$avatar_size = 39;
+				
+				echo get_avatar ( $comment, $avatar_size );
+				
+				/*
+				 * translators: 1: comment author, 2: date and time
+				 */
+				printf ( __ ( '%1$s on %2$s <span class="says">said:</span>', 'thirtyone' ), sprintf ( '<span class="fn">%s</span>', get_comment_author_link () ), sprintf ( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>', esc_url ( get_comment_link ( $comment->comment_ID ) ), get_comment_time ( 'c' ),
+								/* translators: 1: date, 2: time */
+								sprintf ( __ ( '%1$s at %2$s', 'thirtyone' ), get_comment_date (), get_comment_time () ) ) );
+				?>
+
+					<?php edit_comment_link( __( 'Edit', 'thirtyone' ), '<span class="edit-link">', '</span>' ); ?>
+				</div>
+			<!-- .comment-author .vcard -->
+
+				<?php if ( $comment->comment_approved == '0' ) : ?>
+					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'thirtyone' ); ?></em>
+			
+				<?php endif; ?>
+
+			</div>
+
+		<div class="comment-content"><?php comment_text(); ?></div>
+
+		<div class="reply">
+				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'thirtyone' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+			</div>
+		<!-- .reply -->
+	</article>
+	<!-- #comment-## -->
+
+	<?php
+				break;
+		endswitch;
+	}
+
+endif; // ends check for thirtyone_comment()
+
+if (! function_exists ( 'thirtyone_posted_on' )) :
+	/**
+	 * Prints HTML with meta information for the current post-date/time and
+	 * author.
+	 * Create your own thirtyone_posted_on to override in a child theme
+	 *
+	 * @since Thirty One 1.0
+	 */
+	function thirtyone_posted_on() {
+		printf ( __ ( '
+	 		<span class="post-date">
+		 		<a class="icon icon-date" href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>
+	 		</span>
+	 		<span class="by-author">
+	 			<a class="author vcard icon icon-time" href="%5$s" title="%6$s" rel="author">%7$s</a>
+	 		</span>
+	 		', 'thirtyone' ), 
+			esc_url ( get_permalink () ), 
+			esc_attr ( get_the_time () ), 
+			esc_attr ( get_the_date ( 'c' ) ), 
+			esc_html ( get_the_date ('m / d') ), 
+			esc_url ( get_author_posts_url ( get_the_author_meta ( 'ID' ) ) ), 
+			sprintf ( esc_attr__ ( 'View all posts by %s', 'thirtyone' ), get_the_author () ), 
+			esc_html ( get_the_author () ) 
+		);
+	}
+	
+
+endif;
+
+/**
+ * Adds two classes to the array of body classes.
+ * The first is if the site has only had one author with published posts.
+ * The second is if a singular post being displayed
+ *
+ * @since Thirty One 1.0
+ */
+function thirtyone_body_classes($classes) {
+	
+	if (! is_multi_author ()) {
+		$classes [] = 'single-author';
+	}
+	
+	if (is_singular () && ! is_home () && ! is_page_template ( 'sidebar-page.php' ))
+		$classes [] = 'singular';
+	
+	return $classes;
+}
+add_filter ( 'body_class', 'thirtyone_body_classes' );
+
+
+
+
+if ( ! function_exists( 'thirtyone_the_attached_image' ) ) :
+/**
+ * Print the attached image with a link to the next attached image.
+*
+* @since Twenty Fourteen 1.0
+*
+* @return void
+*/
+function thirtyone_the_attached_image() {
+	$post = get_post();
+	/**
+	 * Filter the default thirtyone attachment size.
+	 *
+	 * @since thirtyone 1.0
+	 *
+	 * @param array $dimensions {
+	 *     An array of height and width dimensions.
+	 *
+	 *     @type int $height Height of the image in pixels. Default 810.
+	 *     @type int $width  Width of the image in pixels. Default 810.
+	 * }
+	*/
+	$attachment_size     = apply_filters( 'thirtyone_attachment_size', array( 810, 810 ) );
+	$next_attachment_url = wp_get_attachment_url();
+
+	/*
+	 * Grab the IDs of all the image attachments in a gallery so we can get the URL
+	* of the next adjacent image in a gallery, or the first image (if we're
+			* looking at the last image in a gallery), or, in a gallery of one, just the
+	* link to that image file.
+	*/
+	$attachment_ids = get_posts( array(
+			'post_parent'    => $post->post_parent,
+			'fields'         => 'ids',
+			'numberposts'    => -1,
+			'post_status'    => 'inherit',
+			'post_type'      => 'attachment',
+			'post_mime_type' => 'image',
+			'order'          => 'ASC',
+			'orderby'        => 'menu_order ID',
+	) );
+
+	// If there is more than 1 attachment in a gallery...
+	if ( count( $attachment_ids ) > 1 ) {
+		foreach ( $attachment_ids as $attachment_id ) {
+			if ( $attachment_id == $post->ID ) {
+				$next_id = current( $attachment_ids );
+				break;
+			}
+		}
+
+		// get the URL of the next image attachment...
+		if ( $next_id ) {
+			$next_attachment_url = get_attachment_link( $next_id );
+		}
+
+		// or get the URL of the first image attachment.
+		else {
+			$next_attachment_url = get_attachment_link( array_shift( $attachment_ids ) );
+		}
+	}
+
+	printf( '<a href="%1$s" rel="attachment">%2$s</a>',
+	esc_url( $next_attachment_url ),
+	wp_get_attachment_image( $post->ID, $attachment_size )
+	);
+}
+endif;
+
+
+
+
+
+
+/*
+ * post_views function.
+ */
+include ("inc/thirty_post_views.php");
+
+/*
+ * likethis function.
+ */
+include ("inc/thirty_likethis.php");
+
+/*
+ * thirtyjin_shortcodes_generator optional
+ */
+include ("shortcodes/thirtyjin_shortcodes_generator.php");
+
+
+
+/*
+ * remove the <p> tags on the widget area.
+ */
+remove_filter( 'widget_text', 'wpautop' );
+
+
+
+
+/*
+ * create new post type Step 1 Set-Up
+ */
+
+require_once ('post-type/portfolio-type.php');
+require_once ('post-type/slideshow-type.php');
+require_once ('post-type/download-type.php');
+require_once ('post-type/freebies-type.php');
+require_once ('post-type/books-type.php');
+
+
+
+function portfolio_thumbnail_url($pid) {
+	$image_id = get_post_thumbnail_id ( $pid );
+	$image_url = wp_get_attachment_image_src ( $image_id, 'feature_medium' );
+	return $image_url [0];
+}
+
+
+
+//http://codex.wordpress.org/Plugin_API/Action_Reference/pre_get_posts
+
+function set_posts_per_page( $query ) {
+	
+
+	if ( !is_admin() && is_post_type_archive( array ('portfolio','freebies') ) ) {
+		// Display 50 posts for a custom post type called 'freebies'
+		$query->set( 'posts_per_page', 8 );
+		return;
+	}
+	
+}
+//add_action( 'pre_get_posts',  'set_posts_per_page'  );
+
+
+
+
+//Include Custom Post Types in Search/Tags/Categrory Results
+
+function search_filter($query) {
+	if (!is_admin() && ( $query->is_search || $query->is_category || $query->is_tag || $query-> is_year || $query-> is_month || $query-> is_author ) ) {
+		$query->set('post_type', array( 'post', 'freebies', 'portfolio', 'books' ) );
+		// dont include "page" type;
+	}
+	return $query;
+}
+add_action('pre_get_posts','search_filter');
+
+// END. create new post type
+
+
+
+
+
+
+
+
+/*
+ * Retina images
+ *
+ * This function is attached to the 'wp_generate_attachment_metadata' filter hook.
+ */
+function retina_support_attachment_meta( $metadata, $attachment_id ) {
+	foreach ( $metadata as $key => $value ) {
+		if ( is_array( $value ) ) {
+			foreach ( $value as $image => $attr ) {
+				if ( is_array( $attr ) )
+					retina_support_create_images( get_attached_file( $attachment_id ), $attr['width'], $attr['height'], true );
+			}
+		}
+	}
+
+	return $metadata;
+}
+add_filter( 'wp_generate_attachment_metadata', 'retina_support_attachment_meta', 10, 2 );
+
+/*
+ * Create retina-ready images
+ *
+ * Referenced via retina_support_attachment_meta().
+ */
+function retina_support_create_images( $file, $width, $height, $crop = false ) {
+	if ( $width || $height ) {
+		$resized_file = wp_get_image_editor( $file );
+		if ( ! is_wp_error( $resized_file ) ) {
+			$filename = $resized_file->generate_filename( $width . 'x' . $height . '@2x' );
+
+			$resized_file->resize( $width * 2, $height * 2, $crop );
+			$resized_file->save( $filename );
+
+			$info = $resized_file->get_size();
+
+			return array(
+					'file' => wp_basename( $filename ),
+					'width' => $info['width'],
+					'height' => $info['height'],
+			);
+		}
+	}
+	return false;
+}
+
+/*
+ * Delete retina-ready images
+ *
+ * This function is attached to the 'delete_attachment' filter hook.
+*/
+function delete_retina_support_images( $attachment_id ) {
+	$meta = wp_get_attachment_metadata( $attachment_id );
+	$upload_dir = wp_upload_dir();
+	$path = pathinfo( $meta['file'] );
+	foreach ( $meta as $key => $value ) {
+		if ( 'sizes' === $key ) {
+			foreach ( $value as $sizes => $size ) {
+				$original_filename = $upload_dir['basedir'] . '/' . $path['dirname'] . '/' . $size['file'];
+				$retina_filename = substr_replace( $original_filename, '@2x.', strrpos( $original_filename, '.' ), strlen( '.' ) );
+				if ( file_exists( $retina_filename ) )
+					unlink( $retina_filename );
+			}
+		}
+	}
+}
+add_filter( 'delete_attachment', 'delete_retina_support_images' );
+
+
+
+
+/*
+ *	Include the Themethirtyjin Framework
+ */
+
+include_once ( 'inc/init.php' );
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	page title
+ /*-----------------------------------------------------------------------------------*/
+
+function thirtyone_page_title () {
+
+$PageTitleBefore = '<h3>';
+$PageTitleAfter = '</h3>';
+
+if (is_singular(array('books','freebies','portfolio'))) {
+	echo $PageTitleBefore;
+	$post_type = get_post_type ();
+	echo $post_type;
+	echo $PageTitleAfter;
+}elseif (is_post_type_archive(array('books','freebies','portfolio'))) {
+	echo $PageTitleBefore;
+	post_type_archive_title ();
+	echo $PageTitleAfter;
+}elseif (is_single() && !is_attachment()){ // blog single post
+	echo $PageTitleBefore;
+	echo _e('Blogs', 'thirtyone');
+	echo $PageTitleAfter;
+}elseif (is_home()){
+	echo $PageTitleBefore;
+	echo _e('Home', 'thirtyone');
+	echo $PageTitleAfter;
+}elseif (is_front_page()){
+	echo $PageTitleBefore;
+	echo _e('is_front_page', 'thirtyone');
+	echo $PageTitleAfter;
+}elseif (is_page()){
+	echo $PageTitleBefore;
+	the_title ();  // for page
+	echo $PageTitleAfter;
+	thirtyone_page_intro_meta_box();
+}elseif (is_paged()){
+	echo $PageTitleBefore;
+	the_title ();
+	echo $PageTitleAfter;
+}elseif (is_page_template('template-contact.php')){
+	echo $PageTitleBefore;
+	echo _e('contact us', 'thirtyone');
+	echo $PageTitleAfter;
+}elseif (is_tag()){
+	echo $PageTitleBefore;
+	printf( __( 'Tag Archives: %s', 'thirtyone' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+	echo $PageTitleAfter;
+
+	$tag_description = tag_description();
+	if ( ! empty( $tag_description ) ) {
+		echo apply_filters( 'tag_archive_meta', '<div class="page-intro">' . $tag_description . '</div>' );
+	}
+
+}elseif (is_category()){
+	echo $PageTitleBefore;
+	printf( __( 'Category Archives: %s', 'thirtyone' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+	echo $PageTitleAfter;
+
+	$category_description = category_description();
+	if ( ! empty( $category_description ) ) {
+		echo apply_filters( 'category_archive_meta', '<div class="page-intro">' . $category_description . '</div>' );
+	}
+
+	}elseif (is_search()){ ?>
+		<div class="search_page_box" >	
+			<form method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<input type="text" class="field searchinput" name="s" class="searchinput" value="<?php esc_attr_e( 'Search', 'thirtyone' ); ?>" onfocus=" if(this.value=='<?php esc_attr_e( 'Search', 'thirtyone' ); ?>')this.value='';" onblur="if(this.value=='')this.value='<?php esc_attr_e( 'Search', 'thirtyone' ); ?>';" />
+				<input type="submit" class="submit searchsubmit" name="submit" class="searchsubmit" value="<?php esc_attr_e( 'Search', 'thirtyone' ); ?>" />
+			</form>
+		</div>
+		<?php
+	}elseif (is_time()){
+		echo $PageTitleBefore;
+		printf( __( 'Daily Archives: %s', 'thirtyone' ), '<span>' . get_the_time() . '</span>' );
+		echo $PageTitleAfter;
+	}elseif (is_day()){
+		echo $PageTitleBefore;
+		printf( __( 'Daily Archives: %s', 'thirtyone' ), '<span>' . get_the_date() . '</span>' );
+		echo $PageTitleAfter;
+	}elseif (is_month()){
+		echo $PageTitleBefore;
+		printf( __( 'Monthly Archives: %s', 'thirtyone' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'thirtyone' ) ) . '</span>' );
+		echo $PageTitleAfter;
+	}elseif (is_year()){
+		echo $PageTitleBefore;
+		printf( __( 'Yearly Archives: %s', 'thirtyone' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'thirtyone' ) ) . '</span>' );
+		echo $PageTitleAfter;
+	}elseif (is_author()){
+		echo $PageTitleBefore;
+		printf( __( 'Author Archives: %s', 'thirtyone' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
+		echo $PageTitleAfter;
+	}elseif (is_404()){
+		echo $PageTitleBefore;
+		echo _e( '404 Page', 'thirtyone' );
+		echo $PageTitleAfter;
+	}elseif (is_attachment()){
+		echo $PageTitleBefore;
+		echo _e( 'attachment Page', 'thirtyone' );
+		echo $PageTitleAfter;
+	}elseif (is_archive()){
+		echo $PageTitleBefore;
+		echo _e( 'Archives', 'thirtyone' );
+		echo $PageTitleAfter;
+	}else {
+		echo $PageTitleBefore;
+		echo _e( 'Unknow', 'thirtyone' );
+		echo $PageTitleAfter;
+	}
+
+}
+
+// Custom template tags for this theme.
+//require get_template_directory() . '/inc/template-tags.php';
+

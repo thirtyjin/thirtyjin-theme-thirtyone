@@ -1,0 +1,2599 @@
+# Copyright (C) 2010 Twenty Eleven
+# This file is distributed under the same license as the Twenty Eleven package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Thirty One\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-12 14:34+0800\n"
+"PO-Revision-Date: 2014-04-12 14:35+0800\n"
+"Last-Translator: thirtyjin <thirty.jin@gmail.com>\n"
+"Language-Team: ThirtyJin <thirty.jin@gmail.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:18 functions.php:886
+msgid "404 Page"
+msgstr "404 页面"
+
+#: 404.php:19
+msgid "File or Page not found!"
+msgstr "页面或文件无法找到！"
+
+#: archive-download.php:19 content-freebies.php:45
+msgid "Download"
+msgstr "下载"
+
+#: archive-freebies.php:103 archive-freebies.php:112 archive-freebies.php:116
+#: archive-portfolio.php:92 content-books.php:21 content-books.php:25
+#: page-templates/template-portfolio.php:94
+msgid "View More."
+msgstr "查看更多"
+
+#: archive-freebies.php:169 content-books.php:56 content-freebies.php:64
+#: content-portfolio.php:45 content-post-aside.php:24
+#: content-post-audio.php:41 content-post-gallery.php:45
+#: content-post-image.php:41 content-post-link.php:56
+#: content-post-quote.php:59 content-post-standard.php:50
+#: content-post-status.php:49 content-post-video.php:50 content.php:47
+#: functions.php:112
+msgid "Read More"
+msgstr "查看更多"
+
+#: archive-freebies.php:171 content-books.php:58 content-freebies.php:65
+#: content-page-full.php:14 content-page-notitle.php:15 content-page.php:15
+#: content-portfolio.php:47 content-post-aside.php:26
+#: content-post-audio.php:43 content-post-gallery.php:47
+#: content-post-image.php:43 content-post-link.php:58
+#: content-post-quote.php:61 content-post-standard.php:53
+#: content-post-status.php:50 content-post-video.php:52 content-single.php:23
+#: content.php:50 image.php:56
+msgid "Pages:"
+msgstr "页码："
+
+#: archive-freebies.php:188 archive-portfolio.php:108
+#: content-page-notitle.php:20 content-page.php:20 functions.php:452
+#: functions.php:477 image.php:36 meta-header.php:47 meta-header.php:90
+#: meta-header.php:165 page-templates/template-portfolio.php:110
+#: post-type/download-type.php:21
+msgid "Edit"
+msgstr "编辑"
+
+#: archive-portfolio.php:48 page-templates/template-portfolio.php:50
+msgid "Show All"
+msgstr "显示全部"
+
+#: author.php:41
+#, php-format
+msgid "About %s"
+msgstr "关于 %s"
+
+#: comments.php:16
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr "这篇文章受密码保护。查看评论请输入密码。"
+
+#: comments.php:39 comments.php:59
+msgid "Comment navigation"
+msgstr "评论导航"
+
+#: comments.php:40 comments.php:60
+msgid "&larr; Older Comments"
+msgstr "&larr; 早期评论"
+
+#: comments.php:41 comments.php:61
+msgid "Newer Comments &rarr;"
+msgstr "较新评论 &rarr;"
+
+#: comments.php:71
+msgid "Comments are closed."
+msgstr "评论已关闭。"
+
+#: content-freebies.php:41
+msgid "Demo"
+msgstr "预览"
+
+#: content-none.php:13 page-templates/slideshow-page.php:109
+#: page-templates/template-blog.php:77
+msgid "Nothing Found"
+msgstr "未找到"
+
+#: content-none.php:17 page-templates/slideshow-page.php:113
+#: page-templates/template-blog.php:81
+msgid ""
+"Apologies, but no results were found for the requested archive. Perhaps "
+"searching will help find a related post."
+msgstr "抱歉，您访问的归档页面未找到。也许搜索能帮到您。"
+
+#: content-post-quote.php:35 content-post-standard.php:26 content.php:23
+msgid "Featured"
+msgstr "特色"
+
+#: footer-simple.php:38 footer.php:43
+msgid "http://wordpress.org/"
+msgstr "http://cn.wordpress.org/"
+
+#: footer-simple.php:38 footer.php:43
+#, php-format
+msgid "Driven by %s"
+msgstr "由 %s 驱动"
+
+#: footer-simple.php:60 footer.php:65
+msgid "Back To Top"
+msgstr "返回顶部"
+
+#: functions.php:57
+msgid "Primary Menu"
+msgstr "主菜单"
+
+#: functions.php:58
+msgid "Footer Menu"
+msgstr "页脚菜单"
+
+#: functions.php:180
+msgid "Main Sidebar"
+msgstr "主边栏"
+
+#: functions.php:181
+msgid "Sidebar Area two"
+msgstr "边栏区域二"
+
+#: functions.php:181
+msgid "Another optional widget area for your site sidebar"
+msgstr "站点小工具区域"
+
+#: functions.php:182
+msgid "Footer Area One"
+msgstr "第一页脚区域"
+
+#: functions.php:182 functions.php:183 functions.php:184
+msgid "An optional widget area for your site footer"
+msgstr "站点页脚处供您选用的小工具区域"
+
+#: functions.php:183
+msgid "Footer Area Two"
+msgstr "第二页脚区域"
+
+#: functions.php:184
+msgid "Footer Area Three"
+msgstr "第三页脚区域"
+
+#: functions.php:185
+msgid "Books Channel"
+msgstr "书籍频道"
+
+#: functions.php:185
+msgid "An optional widget area for Books Channel Archives"
+msgstr "书籍频道侧边栏小工具区域"
+
+#: functions.php:363
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> 早期文章"
+
+#: functions.php:364
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "较新文章 <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:378
+msgid "Previous"
+msgstr "上一篇文章"
+
+#: functions.php:452
+msgid "Pingback:"
+msgstr "Pingback 引用通告："
+
+#: functions.php:472
+#, php-format
+msgid "%1$s on %2$s <span class=\"says\">said:</span>"
+msgstr "%1$s 在 %2$s <span class=\"says\">说道：</span>"
+
+#. translators: 1: date, 2: time
+#: functions.php:474
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s%2$s"
+
+#: functions.php:482
+msgid "Your comment is awaiting moderation."
+msgstr "您的评论正等待审核。"
+
+#: functions.php:491
+msgid "Reply <span>&darr;</span>"
+msgstr "回复 <span>&darr;</span>"
+
+#: functions.php:513
+#, php-format
+msgid ""
+"\n"
+"\t \t\t<span class=\"post-date\">\n"
+"\t\t \t\t<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">\n"
+"\t\t \t\t\t<time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time>\n"
+"\t\t \t\t</a>\n"
+"\t \t\t</span>\n"
+"\t \t\t<span class=\"by-author\">\n"
+"\t \t\t\t<a class=\"author vcard\" href=\"%5$s\" title=\"%6$s\" rel=\"author"
+"\">%7$s</a>\n"
+"\t \t\t</span>\n"
+"\t \t\t"
+msgstr ""
+"\n"
+"\t \t\t<span class=\"post-date\">\n"
+"\t\t \t\t<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">\n"
+"\t\t \t\t\t<time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time>\n"
+"\t\t \t\t</a>\n"
+"\t \t\t</span>\n"
+"\t \t\t<span class=\"by-author\">\n"
+"\t \t\t\t<a class=\"author vcard\" href=\"%5$s\" title=\"%6$s\" rel=\"author"
+"\">%7$s</a>\n"
+"\t \t\t</span>\n"
+"\t \t\t"
+
+#: functions.php:813 inc/thirtyone-theme-functions.php:366
+msgid "Blogs"
+msgstr "博客"
+
+#: functions.php:817 inc/thirtyone-theme-functions.php:341
+msgid "Home"
+msgstr "首页"
+
+#: functions.php:821
+msgid "is_front_page"
+msgstr "前台页面"
+
+#: functions.php:834
+msgid "contact us"
+msgstr "联系我们"
+
+#: functions.php:838
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "标签：%s"
+
+#: functions.php:848
+#, php-format
+msgid "Category Archives: %s"
+msgstr "分类：%s"
+
+#: functions.php:859 functions.php:860 searchform.php:10 searchform.php:12
+msgid "Search"
+msgstr "搜索"
+
+#: functions.php:866 functions.php:870
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "日度归档：%s"
+
+#: functions.php:874
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "月度归档：%s"
+
+#: functions.php:874
+msgid "F Y"
+msgstr "F Y"
+
+#: functions.php:878
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "年度归档：%s"
+
+#: functions.php:878
+msgid "Y"
+msgstr "Y"
+
+#: functions.php:882
+#, php-format
+msgid "Author Archives: %s"
+msgstr "作者归档：%s"
+
+#: functions.php:890
+msgid "attachment Page"
+msgstr "附件页"
+
+#: functions.php:894 sidebar.php:13
+msgid "Archives"
+msgstr "归档"
+
+#: functions.php:898 inc/thirtyone-theme-functions.php:444
+msgid "Unknow"
+msgstr "未知"
+
+#: header-fullmode.php:55 header.php:56
+#, php-format
+msgid "Page %s"
+msgstr "第 %s 页"
+
+#: image.php:67
+msgid "Previous Image"
+msgstr "上一张图像"
+
+#: image.php:68
+msgid "Next Image"
+msgstr "下一张图像"
+
+#: inc/meta/thirtyone-freebies-meta-boxes.php:26
+msgid "freebies Meta Box"
+msgstr "下载资源属性"
+
+#: inc/meta/thirtyone-freebies-meta-boxes.php:27
+msgid "freebies Meta Box Optionds"
+msgstr "下载资源面属性选项"
+
+#: inc/meta/thirtyone-freebies-meta-boxes.php:35
+msgid "Hide the download/demo url"
+msgstr "隐藏预览下载地址"
+
+#: inc/meta/thirtyone-freebies-meta-boxes.php:36
+msgid "If you don not want show the download/demo button, plaease set to Off."
+msgstr ""
+
+#: inc/meta/thirtyone-freebies-meta-boxes.php:48
+msgid "Demo URL"
+msgstr "预览地址"
+
+#: inc/meta/thirtyone-freebies-meta-boxes.php:49
+msgid "Freebies Demo URL."
+msgstr "免费资源预览地址"
+
+#: inc/meta/thirtyone-freebies-meta-boxes.php:60
+msgid "download URL"
+msgstr "下载地址"
+
+#: inc/meta/thirtyone-freebies-meta-boxes.php:61
+msgid "Freebies Demo download URL."
+msgstr "免费资源预览下载地址"
+
+#: inc/meta/thirtyone-freebies-meta-boxes.php:70
+msgid "thirtyone freebies download post id select"
+msgstr "下载资源文章编号选择"
+
+#: inc/meta/thirtyone-freebies-meta-boxes.php:73
+msgid "thirtyone freebies download post id select."
+msgstr "下载资源文章编号选择"
+
+#: inc/meta/thirtyone-page-meta-boxes.php:22
+msgid "page options"
+msgstr "页面选项"
+
+#: inc/meta/thirtyone-page-meta-boxes.php:23
+msgid "Page description text"
+msgstr "页面描述文字"
+
+#: inc/meta/thirtyone-portfolio-meta-boxes.php:29
+msgid "Portfolio Meta Box"
+msgstr "作品页面属性"
+
+#: inc/meta/thirtyone-portfolio-meta-boxes.php:30
+msgid "Portfolio Meta Box Optionds"
+msgstr "作品页面属性选项"
+
+#: inc/meta/thirtyone-portfolio-meta-boxes.php:39
+msgid "Time"
+msgstr "时间"
+
+#: inc/meta/thirtyone-portfolio-meta-boxes.php:40
+msgid "Project time period."
+msgstr "项目周期"
+
+#: inc/meta/thirtyone-portfolio-meta-boxes.php:50
+msgid "Role"
+msgstr "职位"
+
+#: inc/meta/thirtyone-portfolio-meta-boxes.php:51
+msgid "The Role in the project."
+msgstr "担任项目职位"
+
+#: inc/meta/thirtyone-portfolio-meta-boxes.php:61
+msgid "Client"
+msgstr "客户"
+
+#: inc/meta/thirtyone-portfolio-meta-boxes.php:62
+msgid "Project client."
+msgstr "项目客户"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:25
+msgid "Links Settings"
+msgstr "链接设置"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:26
+msgid "Input your link"
+msgstr "输入链接地址"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:34
+msgid "The link"
+msgstr "超链接"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:35
+msgid "Insert your link URL, e.g. http://www.thirtyjin.com."
+msgstr "插入链接URL，例如http://www.thirtyjin.com"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:55
+msgid "Quote Settings"
+msgstr "引用设置"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:56
+msgid "Input your quote"
+msgstr "输入引用内容"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:64
+msgid "The quote"
+msgstr "引用"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:65
+msgid "Input your quote."
+msgstr "输入引用内容"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:82
+msgid "Audio Settings"
+msgstr "音频设置"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:83
+msgid ""
+"These settings enable you to embed audio into your posts. You must provide "
+"both .mp3 and .agg/.oga file formats in order for self hosted audio to "
+"function accross all browsers."
+msgstr "这些设置可以让你的日志嵌入音频。"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:92
+msgid "MP3 File URL"
+msgstr "MP3文件地址"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:93
+msgid "The URL to the .mp3 audio file."
+msgstr "MP3音频文件地址"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:103
+msgid "OGA File URL"
+msgstr "OGA文件地址"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:104
+msgid "The URL to the .oga, .ogg audio file."
+msgstr "OGA，OGG音频文件地址"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:114
+msgid "Audio Poster Image"
+msgstr "音频缩略图"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:115
+msgid "The preview image for this audio track."
+msgstr "音频相关预览图片"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:125
+msgid "Audio Poster Image Height"
+msgstr "音频预览图片高度"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:126
+#: inc/meta/thirtyone-post-meta-boxes.php:194
+msgid "The height of the poster image."
+msgstr "预览图片高度"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:150
+msgid "video Settings"
+msgstr "视频设置"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:151
+msgid "These settings enable you to embed video into your posts."
+msgstr "这些设置可以让你的日志嵌入视频。"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:160
+msgid "M4V File URL"
+msgstr "M4V文件地址"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:161
+msgid "The URL to the .m4v video file."
+msgstr "M4V视频文件地址"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:171
+msgid "OGV File URL"
+msgstr "OGV文件地址"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:172
+msgid "The URL to the .ogv video file."
+msgstr "OGV视频文件地址"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:182
+msgid "Video Poster Image"
+msgstr "视频缩略图"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:183
+msgid "The preview image for this video."
+msgstr "视频相关预览图"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:193
+msgid "Video Poster Image Height"
+msgstr "视频预览图高度"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:204
+msgid "Embedded Code"
+msgstr "视频Embedded代码"
+
+#: inc/meta/thirtyone-post-meta-boxes.php:205
+msgid ""
+"If you are using something other than self hosted video such as Youtube or "
+"Vimeo, paste the embed code here. Width is best at 500px with any height. "
+"This field will override the above."
+msgstr ""
+
+#: inc/meta/thirtyone-seo-meta-boxes.php:24
+msgid "SEO Settings"
+msgstr "搜索引擎优化设置"
+
+#: inc/meta/thirtyone-seo-meta-boxes.php:25
+msgid ""
+"These settings enable you to customize the SEO settings for this post/page/"
+"portfolio."
+msgstr "这些设置可以启用自定义SEO设置在日志，页面，作品三类文章中。"
+
+#: inc/meta/thirtyone-seo-meta-boxes.php:34 shortcodes/tinymce/config.php:122
+#: shortcodes/tinymce/config.php:155
+msgid "Title"
+msgstr "标题"
+
+#: inc/meta/thirtyone-seo-meta-boxes.php:35
+msgid "Most search engines use a maximum of 60 chars for the title."
+msgstr "多数搜索引擎使用最多60个字符的标题。"
+
+#: inc/meta/thirtyone-seo-meta-boxes.php:45 post-type/books-type.php:83
+#: post-type/download-type.php:76 post-type/freebies-type.php:97
+#: post-type/portfolio-type.php:84
+msgid "Description"
+msgstr "描述"
+
+#: inc/meta/thirtyone-seo-meta-boxes.php:46
+msgid "Most search engines use a maximum of 160 chars for the description."
+msgstr "多数搜索引擎使用最多160个字符的描述。"
+
+#: inc/meta/thirtyone-seo-meta-boxes.php:56
+msgid "Keywords"
+msgstr "关键词"
+
+#: inc/meta/thirtyone-seo-meta-boxes.php:57
+msgid "A comma separated list of keywords."
+msgstr "“逗号”区分不同的关键词"
+
+#: inc/meta/thirtyone-slideshow-meta-boxes.php:29
+msgid "slideshow Meta Box"
+msgstr "轮换图像属性"
+
+#: inc/meta/thirtyone-slideshow-meta-boxes.php:30
+msgid "slideshow Meta Box options"
+msgstr "轮换图像属性选项"
+
+#: inc/meta/thirtyone-slideshow-meta-boxes.php:39
+msgid "The link URL"
+msgstr "链接地址"
+
+#: inc/meta/thirtyone-slideshow-meta-boxes.php:40
+msgid "Link URL."
+msgstr "链接地址"
+
+#: inc/meta/thirtyone-slideshow-meta-boxes.php:50
+#: inc/meta/thirtyone-slideshow-meta-boxes.php:51
+#: inc/meta/thirtyone-slideshow-meta-boxes.php:61
+msgid "URL open in new window ?"
+msgstr "在新窗口中打开链接?"
+
+#: inc/meta/thirtyone-thumbnail-meta-boxes.php:26
+msgid "Thumbnail Meta Box"
+msgstr "缩略图属性"
+
+#: inc/meta/thirtyone-thumbnail-meta-boxes.php:27
+msgid "Thumbnail Meta Box options"
+msgstr "缩略图属性选项"
+
+#: inc/meta/thirtyone-thumbnail-meta-boxes.php:35
+msgid "thumbnail-four"
+msgstr "缩略图四"
+
+#: inc/meta/thirtyone-thumbnail-meta-boxes.php:36
+msgid "220px thumbnail image"
+msgstr "220px 宽缩略图"
+
+#: inc/meta/thirtyone-thumbnail-meta-boxes.php:46
+msgid "thumbnail-three"
+msgstr "缩略图三"
+
+#: inc/meta/thirtyone-thumbnail-meta-boxes.php:47
+msgid "300px thumbnail image"
+msgstr "300px 宽缩略图"
+
+#: inc/meta/thirtyone-thumbnail-meta-boxes.php:57
+msgid "thumbnail-two"
+msgstr "缩略图二"
+
+#: inc/meta/thirtyone-thumbnail-meta-boxes.php:58
+msgid "460px thumbnail image"
+msgstr "460px 宽缩略图"
+
+#: inc/meta/thirtyone-thumbnail-meta-boxes.php:68
+msgid "thumbnail-one"
+msgstr "缩略图一"
+
+#: inc/meta/thirtyone-thumbnail-meta-boxes.php:69
+msgid "940px full thumbnail image"
+msgstr "940px 全屏宽缩略图"
+
+#: inc/template-tags.php:47
+msgid "&larr; Previous"
+msgstr "&larr; 上一个"
+
+#: inc/template-tags.php:48
+msgid "Next &rarr;"
+msgstr "下一个 &rarr;"
+
+#: inc/template-tags.php:55
+msgid "Posts navigation"
+msgstr "文章导航"
+
+#: inc/template-tags.php:84
+msgid "Post navigation"
+msgstr "文章导航"
+
+#: inc/template-tags.php:88
+msgid "<span class=\"meta-nav\">Published In</span>%title"
+msgstr "<span class=\"meta-nav\">发布于</span> %title"
+
+#: inc/template-tags.php:90
+msgid "<span class=\"meta-nav\">Previous Post</span>%title"
+msgstr "上一篇"
+
+#: inc/template-tags.php:91
+msgid "<span class=\"meta-nav\">Next Post</span>%title"
+msgstr "下一篇"
+
+#: inc/template-tags.php:110
+msgid "Sticky"
+msgstr "置顶"
+
+#: inc/thirtyone-theme-functions.php:270
+msgid "Follow us on weibo!"
+msgstr "在微薄上关注我们！"
+
+#: inc/thirtyone-theme-functions.php:275
+msgid "Join our Facebook page!"
+msgstr "添加我们的脸书页面！"
+
+#: inc/thirtyone-theme-functions.php:280
+msgid "Follow us on Twitter!"
+msgstr "在推特上关注我们！"
+
+#: inc/thirtyone-theme-functions.php:285
+msgid "Follow us on Linkedin!"
+msgstr "在LinkedIn上关注我们！"
+
+#: inc/thirtyone-theme-functions.php:290
+msgid "Follow us on Dribbble!"
+msgstr "在Dribbble上关注我们！"
+
+#: inc/thirtyone-theme-functions.php:295
+msgid "Follow us on Google+ !"
+msgstr "在Google+上关注我们！"
+
+#: inc/thirtyone-theme-functions.php:300
+msgid "Follow us on Tumblr!"
+msgstr "在Tumblr上关注我们！"
+
+#: inc/thirtyone-theme-functions.php:305
+msgid "Follow us on Flickr!"
+msgstr "在Flickr关注我们！"
+
+#: inc/thirtyone-theme-functions.php:310
+msgid "Subscribe to our RSS-feed."
+msgstr "订阅我们的RSS。"
+
+#: inc/thirtyone-theme-functions.php:315
+msgid "Contact us with Email."
+msgstr "邮件联系我们。"
+
+#: inc/thirtyone-theme-functions.php:361
+msgid "Archive by category"
+msgstr "分类归档"
+
+#: inc/thirtyone-theme-functions.php:425
+msgid "Search results"
+msgstr "搜索结果"
+
+#: inc/thirtyone-theme-functions.php:428
+msgid "Posts Tagged"
+msgstr "文章标签"
+
+#: inc/thirtyone-theme-functions.php:433
+msgid "Articles posted by"
+msgstr "文章发布"
+
+#: inc/thirtyone-theme-functions.php:436
+msgid "Error 404"
+msgstr "错误404"
+
+#: inc/thirtyone-theme-functions.php:439 inc/thirtyone-theme-functions.php:442
+msgid "Attachment"
+msgstr "附件"
+
+#: inc/thirtyone-theme-functions.php:452
+msgid "Page"
+msgstr "页码"
+
+#: inc/thirtyone-theme-options.php:39
+msgid "General Options"
+msgstr "主题选项"
+
+#: inc/thirtyone-theme-options.php:43
+msgid "Social-Network"
+msgstr "社交网络"
+
+#: inc/thirtyone-theme-options.php:47
+msgid "Styling Options"
+msgstr "样式设置"
+
+#: inc/thirtyone-theme-options.php:51
+msgid "Mobile Options"
+msgstr "移动选项"
+
+#: inc/thirtyone-theme-options.php:55
+msgid "Portfolio Options"
+msgstr "作品集设置"
+
+#: inc/thirtyone-theme-options.php:59
+msgid "Slideshow Options"
+msgstr "轮转图像选项"
+
+#: inc/thirtyone-theme-options.php:63
+msgid "Senior Options"
+msgstr "高级选项"
+
+#: inc/thirtyone-theme-options.php:69
+msgid "Custom Logo"
+msgstr "自定义logo"
+
+#: inc/thirtyone-theme-options.php:70
+msgid "Upload a custom logo image."
+msgstr "上传一张网站logo图片；"
+
+#: inc/thirtyone-theme-options.php:81
+msgid "Plain Text Logo"
+msgstr "文字logo"
+
+#: inc/thirtyone-theme-options.php:82
+msgid "Using plain text instead of image logo."
+msgstr "利用文字代替图片logo"
+
+#: inc/thirtyone-theme-options.php:94
+msgid "Site Description"
+msgstr "站点副标题（描述）"
+
+#: inc/thirtyone-theme-options.php:95
+msgid "Display or Hide the site description."
+msgstr "显示或隐藏网站描述。"
+
+#: inc/thirtyone-theme-options.php:107
+msgid "Social Network List"
+msgstr "社交网络列表"
+
+#: inc/thirtyone-theme-options.php:108
+msgid "Display or Hide the Social Network list."
+msgstr "显示或隐藏顶部社交网络列表"
+
+#: inc/thirtyone-theme-options.php:120
+msgid "Header Search Form"
+msgstr "顶部搜索框"
+
+#: inc/thirtyone-theme-options.php:121
+msgid "Display or Hide the Header Search Form."
+msgstr "显示或隐藏顶部搜索框"
+
+#: inc/thirtyone-theme-options.php:133
+msgid "Breadcrumbs"
+msgstr "面包屑导航"
+
+#: inc/thirtyone-theme-options.php:134
+msgid "Display or Hide the Header Breadcrumbs"
+msgstr "显示或隐藏面包屑导航"
+
+#: inc/thirtyone-theme-options.php:146
+msgid "Custom Favicon icon"
+msgstr "自定义Favicon图标"
+
+#: inc/thirtyone-theme-options.php:147
+msgid "Upload a custom Favicon icon"
+msgstr "上传一张自定义Favicon图标"
+
+#: inc/thirtyone-theme-options.php:158
+msgid "Custom Login Logo Upload"
+msgstr "自定义登录页面logo"
+
+#: inc/thirtyone-theme-options.php:159
+msgid "Upload a custom login logo"
+msgstr "上传一张登录页面的logo"
+
+#: inc/thirtyone-theme-options.php:170
+msgid "Contact Form Email"
+msgstr "联系邮箱地址"
+
+#: inc/thirtyone-theme-options.php:171
+msgid "Input the Contact Form Email Address"
+msgstr "输入联系邮箱地址"
+
+#: inc/thirtyone-theme-options.php:182
+msgid "Prompt Banner"
+msgstr "顶部提醒栏"
+
+#: inc/thirtyone-theme-options.php:183
+msgid "Display or Hide the Header Prompt Banner"
+msgstr "显示或隐藏顶部提醒栏"
+
+#: inc/thirtyone-theme-options.php:195
+msgid "Prompt Banner Content"
+msgstr "顶部提醒内容"
+
+#: inc/thirtyone-theme-options.php:196
+msgid "Input the Prompt Banner Content"
+msgstr "输入顶部提醒内容"
+
+#: inc/thirtyone-theme-options.php:207
+msgid "Copyright"
+msgstr "版权"
+
+#: inc/thirtyone-theme-options.php:208
+msgid "Site Copyright on the footer."
+msgstr "底部站点版权"
+
+#: inc/thirtyone-theme-options.php:219
+msgid "icp id"
+msgstr "备案号"
+
+#: inc/thirtyone-theme-options.php:220
+msgid "China icp id."
+msgstr "中国网络备案号"
+
+#: inc/thirtyone-theme-options.php:231
+msgid "Facebook"
+msgstr "脸书"
+
+#: inc/thirtyone-theme-options.php:232
+msgid "Follow us on facebook."
+msgstr "关注我们的Facebook主页。"
+
+#: inc/thirtyone-theme-options.php:243
+msgid "Twitter"
+msgstr "推特"
+
+#: inc/thirtyone-theme-options.php:244
+msgid "Follow us on twitter."
+msgstr "关注我们的Twitter。"
+
+#: inc/thirtyone-theme-options.php:255
+msgid "Googleplus"
+msgstr "Google+"
+
+#: inc/thirtyone-theme-options.php:256
+msgid "Follow us on Googleplus."
+msgstr "关注我们的Google+。"
+
+#: inc/thirtyone-theme-options.php:267
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: inc/thirtyone-theme-options.php:268
+msgid "Follow us on LinkedIn."
+msgstr "查看LinkedIn简历。"
+
+#: inc/thirtyone-theme-options.php:279
+msgid "Tumblr"
+msgstr "Tumblr"
+
+#: inc/thirtyone-theme-options.php:280
+msgid "Follow us on Tumblr."
+msgstr "在Tumblr上关注我们。"
+
+#: inc/thirtyone-theme-options.php:291
+msgid "Flickr"
+msgstr "Flickr"
+
+#: inc/thirtyone-theme-options.php:292
+msgid "Follow us on Flickr."
+msgstr "在Flickr上关注我们。"
+
+#: inc/thirtyone-theme-options.php:303
+msgid "Weibo"
+msgstr "微博"
+
+#: inc/thirtyone-theme-options.php:304
+msgid "Follow us on Sina WeiBo."
+msgstr "关注我们的微博。"
+
+#: inc/thirtyone-theme-options.php:315
+msgid "Weixin"
+msgstr "微信"
+
+#: inc/thirtyone-theme-options.php:316
+msgid "Follow us on Weixin."
+msgstr "关注我们的微信。"
+
+#: inc/thirtyone-theme-options.php:327
+msgid "Dribbble"
+msgstr "Dribbble"
+
+#: inc/thirtyone-theme-options.php:328
+msgid "Follow us on Dribbble."
+msgstr "在Dribbble上关注我们。"
+
+#: inc/thirtyone-theme-options.php:351
+msgid "Email"
+msgstr "邮箱"
+
+#: inc/thirtyone-theme-options.php:352
+msgid "Contact us with Email"
+msgstr "用邮件联系我们。"
+
+#: inc/thirtyone-theme-options.php:363
+msgid "Layout"
+msgstr "布局"
+
+#: inc/thirtyone-theme-options.php:364
+msgid "Choose a layout for your theme"
+msgstr "选择你主题的布局"
+
+#: inc/thirtyone-theme-options.php:375
+msgid "Left Sidebar"
+msgstr "左边栏"
+
+#: inc/thirtyone-theme-options.php:380
+msgid "Right Sidebar"
+msgstr "右边栏"
+
+#: inc/thirtyone-theme-options.php:385
+msgid "Full Width (no sidebar)"
+msgstr "单栏（无边栏）"
+
+#: inc/thirtyone-theme-options.php:392
+msgid "Google web fonts"
+msgstr "Google网络字体"
+
+#: inc/thirtyone-theme-options.php:393
+msgid "A web with web fonts is more beautiful, readable, accessible."
+msgstr "网络字体让网页更加漂亮，易读，舒适。"
+
+#: inc/thirtyone-theme-options.php:404
+msgid "Header background"
+msgstr "顶部背景"
+
+#: inc/thirtyone-theme-options.php:405
+msgid "To change the header background."
+msgstr "改变顶部背景"
+
+#: inc/thirtyone-theme-options.php:416
+msgid "Theme Background"
+msgstr "主题背景"
+
+#: inc/thirtyone-theme-options.php:417
+msgid "To change the website background"
+msgstr "改变网站背景"
+
+#: inc/thirtyone-theme-options.php:428
+msgid "Customize CSS"
+msgstr "自定义CSS样式"
+
+#: inc/thirtyone-theme-options.php:429
+msgid "Customize CSS Style"
+msgstr "自定义CSS样式"
+
+#: inc/thirtyone-theme-options.php:440
+msgid "Response Switch"
+msgstr "响应式页面"
+
+#: inc/thirtyone-theme-options.php:441
+msgid "Enable or Disable the Response Web for Mobile device."
+msgstr "打开或关闭针对移动设备的响应页面"
+
+#: inc/thirtyone-theme-options.php:453
+msgid "Touch Icon (iPhone)"
+msgstr "iPhone桌面图标"
+
+#: inc/thirtyone-theme-options.php:454
+msgid "iphone: sizes=\"57x57\"; iphone-retina: sizes=\"144x144\""
+msgstr "iPhone主屏图标大小=57x57；iPhone retina 主屏图标大小=144x144；"
+
+#: inc/thirtyone-theme-options.php:465
+msgid "Touch Icon (iPad)"
+msgstr "主屏图标"
+
+#: inc/thirtyone-theme-options.php:466
+msgid "ipad,sizes=\"72x72\"; ipad-retina, sizes=\"144x144\""
+msgstr "iPad主屏图标大小=72x72；iPad retina 主屏图标大小=144x144；"
+
+#: inc/thirtyone-theme-options.php:477
+msgid "Startup Image"
+msgstr "启动图像"
+
+#: inc/thirtyone-theme-options.php:478
+msgid ""
+"iOS splash screen: iPhone : 320x460; iPhone retina : 640x920; iPhone 5 "
+"retina : 640x1096; iPad portrait : 768x1004; iPad retina portrait : "
+"1536x2008; iPad landscape : 748x1024; iPad retina landscape : 1496x2048;"
+msgstr "iOS启动画面"
+
+#: inc/thirtyone-theme-options.php:489
+msgid "apple mobile web app capable"
+msgstr "iOS移动网页应用能力"
+
+#: inc/thirtyone-theme-options.php:490
+msgid "Sets whether a web application runs in full-screen mode."
+msgstr "设置是否网页进入全屏模式"
+
+#: inc/thirtyone-theme-options.php:513
+msgid "apple mobile web app status bar style"
+msgstr "iOS移动网页应用状态栏样式"
+
+#: inc/thirtyone-theme-options.php:514
+msgid "Sets the style of the status bar for a web application."
+msgstr "设置页面在iOS中状态栏样式。"
+
+#: inc/thirtyone-theme-options.php:542
+msgid "Portfolio Columns"
+msgstr "作品集列数"
+
+#: inc/thirtyone-theme-options.php:543
+msgid "The columns number of Portfolio page."
+msgstr "作品集页面内容列数"
+
+#: inc/thirtyone-theme-options.php:554
+msgid "One Column"
+msgstr "一列"
+
+#: inc/thirtyone-theme-options.php:559
+msgid "Two Columns"
+msgstr "两列"
+
+#: inc/thirtyone-theme-options.php:564
+msgid "Three Columns"
+msgstr "三列"
+
+#: inc/thirtyone-theme-options.php:569
+msgid "Four Columns"
+msgstr "四列"
+
+#: inc/thirtyone-theme-options.php:576
+msgid "Numbers pre page"
+msgstr "每页数量"
+
+#: inc/thirtyone-theme-options.php:577
+msgid "The post numbers pre page."
+msgstr "每页显示作品数量"
+
+#: inc/thirtyone-theme-options.php:588 inc/thirtyone-theme-options.php:589
+msgid "Focus Images Slider"
+msgstr "焦点图像轮转"
+
+#: inc/thirtyone-theme-options.php:600 inc/thirtyone-theme-options.php:601
+msgid "freebies Images Slider"
+msgstr "资源焦点图像轮播"
+
+#: inc/thirtyone-theme-options.php:612
+msgid "Robots index Setting"
+msgstr "Robots 索引设置"
+
+#: inc/thirtyone-theme-options.php:613 inc/thirtyone-theme-options.php:626
+#: inc/thirtyone-theme-options.php:639
+msgid ""
+"If you don not want to host jQuery yourself, you can include it from a "
+"google CDN (Content Delivery Network)."
+msgstr "提高jQuery的加载速度，可以选择从Google CDN载入。"
+
+#: inc/thirtyone-theme-options.php:625
+msgid "Robots follow Setting"
+msgstr "Robots follow 设置"
+
+#: inc/thirtyone-theme-options.php:638
+msgid "Google jquery"
+msgstr "Google jquery"
+
+#: inc/thirtyone-theme-options.php:651
+msgid "Tracking Code"
+msgstr "统计代码"
+
+#: inc/thirtyone-theme-options.php:652
+msgid ""
+"Paste your Google Analytics (or other) tracking code here. It will be "
+"inserted before the closing body tag of your theme."
+msgstr "粘贴Google分析（或其它）统计代码在此。"
+
+#: inc/widgets/widget-flickr.php:27
+msgid "Displays your Flickr photos."
+msgstr "显示你的Flickr照片"
+
+#: inc/widgets/widget-flickr.php:38
+msgid "Thirtyone Flickr Photos"
+msgstr "Flickr 照片"
+
+#: inc/widgets/widget-flickr.php:124 inc/widgets/widget-newsletter.php:121
+#: inc/widgets/widget-orangebox.php:121 inc/widgets/widget-tweets.php:126
+#: inc/widgets/widget-video.php:119 inc/widgets/widgets.php:169
+#: inc/widgets/widgets.php:309 inc/widgets/widgets.php:435
+#: inc/widgets/widgets.php:557 inc/widgets/widgets.php:682
+msgid "Title:"
+msgstr "标题："
+
+#: inc/widgets/widget-flickr.php:130
+msgid "Flickr ID:"
+msgstr "Flickr ID:"
+
+#: inc/widgets/widget-flickr.php:136
+msgid "Number of Photos:"
+msgstr "照片数量"
+
+#: inc/widgets/widget-flickr.php:148
+msgid "Type (user or group):"
+msgstr "类型（用户或组）"
+
+#: inc/widgets/widget-flickr.php:157
+msgid "Display (random or latest):"
+msgstr "显示（随机或最新）"
+
+#: inc/widgets/widget-newsletter.php:38
+msgid "Join our Newsletter!"
+msgstr "订阅我们的文章更新！"
+
+#: inc/widgets/widget-newsletter.php:49
+msgid "Newsletter"
+msgstr "更新订阅"
+
+#: inc/widgets/widget-newsletter.php:79
+msgid "Subscribe"
+msgstr "邮件订阅"
+
+#: inc/widgets/widget-newsletter.php:127 inc/widgets/widget-orangebox.php:131
+#: inc/widgets/widget-video.php:129
+msgid "Short Description:"
+msgstr "短描述："
+
+#: inc/widgets/widget-orangebox.php:38
+msgid "Displays your YouTube or Vimeo orangebox."
+msgstr "显示YouTube或Vimeo视频。"
+
+#: inc/widgets/widget-orangebox.php:49
+msgid "Thirtyone Orangebox Widget"
+msgstr "颜色合作工具"
+
+#: inc/widgets/widget-orangebox.php:126
+msgid "html Code:"
+msgstr "Html 代码："
+
+#: inc/widgets/widget-tweets.php:42
+msgid "Displays your latest tweets."
+msgstr "显示最近的推文"
+
+#: inc/widgets/widget-tweets.php:48
+msgid "Thirtyone Latest Tweets"
+msgstr "最近推文"
+
+#: inc/widgets/widget-tweets.php:131
+msgid "Twitter Username e.g. themethirtyjin"
+msgstr "推特用户名"
+
+#: inc/widgets/widget-tweets.php:136
+msgid "Number of tweets (max 20)"
+msgstr "推文数量（最多20）"
+
+#: inc/widgets/widget-tweets.php:141
+msgid "Follow Text e.g. Follow me on Twitter"
+msgstr "在Twitter关注我们"
+
+#: inc/widgets/widget-video.php:38
+msgid "Displays your YouTube or Vimeo Video."
+msgstr "显示YouTube或Vimeo视频。"
+
+#: inc/widgets/widget-video.php:49
+msgid "Thirtyone Video Widget"
+msgstr "视频工具"
+
+#: inc/widgets/widget-video.php:124
+msgid "Embed Code:"
+msgstr "Embed 代码："
+
+#: inc/widgets/widgets.php:17
+msgid ""
+"Use this widget to list your recent Aside, Status, Quote, and Link posts"
+msgstr "使用这个小工具来列出您近期的日志、状态、引语和链接类文章"
+
+#: inc/widgets/widgets.php:18
+msgid "ThirtyOne Ephemera"
+msgstr "文章格式列表"
+
+#: inc/widgets/widgets.php:47
+msgid "Ephemera"
+msgstr "碎碎念"
+
+#: inc/widgets/widgets.php:111 inc/widgets/widgets.php:393
+#: inc/widgets/widgets.php:515
+msgid "Comment"
+msgstr "评论"
+
+#: inc/widgets/widgets.php:111 inc/widgets/widgets.php:393
+#: inc/widgets/widgets.php:515
+msgid "1 Comment"
+msgstr "1 条评论"
+
+#: inc/widgets/widgets.php:111 inc/widgets/widgets.php:393
+#: inc/widgets/widgets.php:515
+msgid "% Comments"
+msgstr "% 条评论"
+
+#: inc/widgets/widgets.php:172 inc/widgets/widgets.php:438
+#: inc/widgets/widgets.php:560
+msgid "Number of posts to show:"
+msgstr "显示文章数："
+
+#: inc/widgets/widgets.php:207
+msgid "The most recent comments"
+msgstr "最近最多评论"
+
+#: inc/widgets/widgets.php:208
+msgid "ThirtyOne Recent Comments"
+msgstr "最近评论"
+
+#: inc/widgets/widgets.php:252
+msgid "Recent Comments"
+msgstr "近期评论"
+
+#: inc/widgets/widgets.php:312
+msgid "Number of comments to show:"
+msgstr "显示评论数："
+
+#: inc/widgets/widgets.php:338
+msgid "The recent posts on your site"
+msgstr "站点最近文章"
+
+#: inc/widgets/widgets.php:339
+msgid "ThirtyOne Recent Posts"
+msgstr "最近文章"
+
+#: inc/widgets/widgets.php:367
+msgid "Recent Posts"
+msgstr "近期文章"
+
+#: inc/widgets/widgets.php:461
+msgid "The most popular posts on your site"
+msgstr "站点最热文章"
+
+#: inc/widgets/widgets.php:462
+msgid "Thirtyone Pop Posts"
+msgstr "最热文章"
+
+#: inc/widgets/widgets.php:490
+msgid "Pop Posts"
+msgstr "最热文章"
+
+#: inc/widgets/widgets.php:515
+msgid "No Comment"
+msgstr "快去点评"
+
+#: inc/widgets/widgets.php:595
+msgid "The Most Liked posts on your site"
+msgstr "站点最多喜欢文章"
+
+#: inc/widgets/widgets.php:677
+msgid "Most Liked Posts"
+msgstr "最多喜欢文章"
+
+#: inc/widgets/widgets.php:678
+msgid "5"
+msgstr "5"
+
+#: inc/widgets/widgets.php:688
+msgid "Number of Posts to Show:"
+msgstr "显示文章数："
+
+#: meta-header.php:19 meta-header.php:118 meta-header.php:179
+#, php-format
+msgid "Permanent Link to %s"
+msgstr "链向 %s 的固定链接"
+
+#: meta-header.php:42 meta-header.php:160
+msgid "0"
+msgstr "0"
+
+#: meta-header.php:42 meta-header.php:160
+msgid "<b>1</b>"
+msgstr "<b>1</b> "
+
+#: meta-header.php:42 meta-header.php:160
+msgid "<b>%</b>"
+msgstr "<b>%</b> "
+
+#: post-type/books-type.php:15 post-type/books-type.php:29
+msgid "books"
+msgstr "书籍"
+
+#: post-type/books-type.php:16
+msgid "books Item"
+msgstr "书籍条目"
+
+#: post-type/books-type.php:17 post-type/download-type.php:19
+#: post-type/freebies-type.php:17 post-type/portfolio-type.php:19
+#: post-type/slideshow-type.php:11
+msgid "Add New"
+msgstr "添加新的条目"
+
+#: post-type/books-type.php:18
+msgid "Add New books Item"
+msgstr "添加新的书籍条目"
+
+#: post-type/books-type.php:19
+msgid "Edit books Item"
+msgstr "编辑书籍条目"
+
+#: post-type/books-type.php:20
+msgid "New books Item"
+msgstr "新书籍条目"
+
+#: post-type/books-type.php:21
+msgid "View books Item"
+msgstr "查看书籍条目"
+
+#: post-type/books-type.php:22
+msgid "Search books"
+msgstr "搜索书目"
+
+#: post-type/books-type.php:23
+msgid "No books found"
+msgstr "未找到书籍条目"
+
+#: post-type/books-type.php:24
+msgid "No books found in Trash"
+msgstr "回收站未找到书籍条目"
+
+#: post-type/books-type.php:33
+msgid "books_project"
+msgstr "书籍项目"
+
+#: post-type/books-type.php:35
+msgid "Recommend good books"
+msgstr "好书籍推荐"
+
+#: post-type/books-type.php:61 post-type/books-type.php:63
+msgid "books Types"
+msgstr "书籍类型"
+
+#: post-type/books-type.php:64 post-type/books-type.php:66
+msgid "books Type"
+msgstr "书籍类型"
+
+#: post-type/books-type.php:81 post-type/download-type.php:74
+#: post-type/freebies-type.php:95 post-type/portfolio-type.php:82
+msgid "Project"
+msgstr "项目"
+
+#: post-type/books-type.php:82 post-type/download-type.php:75
+#: post-type/freebies-type.php:96 post-type/portfolio-type.php:83
+msgid "Thumbnail"
+msgstr "缩略图"
+
+#: post-type/books-type.php:84 post-type/download-type.php:77
+#: post-type/freebies-type.php:98 post-type/portfolio-type.php:85
+msgid "Type of Project"
+msgstr "项目类别"
+
+#: post-type/download-type.php:17
+msgid "Downloads"
+msgstr "下载"
+
+#: post-type/download-type.php:18
+msgid "download"
+msgstr "下载"
+
+#: post-type/download-type.php:20
+msgid "Add New Download"
+msgstr "新建下载条目"
+
+#: post-type/download-type.php:22
+msgid "Edit Download"
+msgstr "编辑下载条目"
+
+#: post-type/download-type.php:23
+msgid "New Download"
+msgstr "新下载条目"
+
+#: post-type/download-type.php:24 post-type/download-type.php:25
+msgid "View Download"
+msgstr "查看下载条目"
+
+#: post-type/download-type.php:26
+msgid "Search Downloads"
+msgstr "搜索下载条目"
+
+#: post-type/download-type.php:27
+msgid "No downloads found"
+msgstr "未找到下载条目"
+
+#: post-type/download-type.php:28
+msgid "No downloads found in Trash"
+msgstr "回收站未找到下载条目"
+
+#: post-type/download-type.php:54 post-type/download-type.php:56
+msgid "Download Categories"
+msgstr "下载类别"
+
+#: post-type/download-type.php:57
+msgid "Download Category"
+msgstr "下载类别"
+
+#: post-type/freebies-type.php:15 post-type/freebies-type.php:29
+msgid "Freebies"
+msgstr "资源"
+
+#: post-type/freebies-type.php:16
+msgid "Freebies Item"
+msgstr "资源条目"
+
+#: post-type/freebies-type.php:18
+msgid "Add New Freebies Item"
+msgstr "添加新的资源条目"
+
+#: post-type/freebies-type.php:19
+msgid "Edit Freebies Item"
+msgstr "编辑资源条目"
+
+#: post-type/freebies-type.php:20
+msgid "New Freebies Item"
+msgstr "新资源条目"
+
+#: post-type/freebies-type.php:21
+msgid "View Freebies Item"
+msgstr "查看资源条目"
+
+#: post-type/freebies-type.php:22 post-type/freebies-type.php:67
+msgid "Search Freebies"
+msgstr "搜索资源"
+
+#: post-type/freebies-type.php:23
+msgid "No Freebies found"
+msgstr "未找到下载资源"
+
+#: post-type/freebies-type.php:24
+msgid "No Freebies found in Trash"
+msgstr "回收站未找到下载资源条目"
+
+#: post-type/freebies-type.php:33
+msgid "freebies_project"
+msgstr "免费资源项目"
+
+#: post-type/freebies-type.php:63 post-type/freebies-type.php:65
+msgid "Freebies Types"
+msgstr "免费资源类型"
+
+#: post-type/freebies-type.php:66 post-type/freebies-type.php:77
+msgid "Freebies Type"
+msgstr "免费设计资源类型"
+
+#: post-type/freebies-type.php:68
+msgid "All Freebies"
+msgstr "全部资源"
+
+#: post-type/freebies-type.php:69
+msgid "Parent Freebie"
+msgstr "父级资源"
+
+#: post-type/freebies-type.php:70
+msgid "Parent Freebie:"
+msgstr "父级资源"
+
+#: post-type/freebies-type.php:71
+msgid "Edit Freebie"
+msgstr "编辑资源"
+
+#: post-type/freebies-type.php:72
+msgid "Update Freebie"
+msgstr "更新资源"
+
+#: post-type/freebies-type.php:73
+msgid "Add New Freebie"
+msgstr "添加新的资源"
+
+#: post-type/freebies-type.php:74
+msgid "New Freebie Name"
+msgstr "新资源名称"
+
+#: post-type/freebies-type.php:75
+msgid "Freebie"
+msgstr "资源"
+
+#: post-type/portfolio-type.php:17 post-type/portfolio-type.php:31
+msgid "Portfolio"
+msgstr "作品"
+
+#: post-type/portfolio-type.php:18
+msgid "Portfolio Item"
+msgstr "作品条目"
+
+#: post-type/portfolio-type.php:20
+msgid "Add New Portfolio Item"
+msgstr "添加作品条目"
+
+#: post-type/portfolio-type.php:21
+msgid "Edit Portfolio Item"
+msgstr "编辑作品条目"
+
+#: post-type/portfolio-type.php:22
+msgid "New Portfolio Item"
+msgstr "新作品条目"
+
+#: post-type/portfolio-type.php:23
+msgid "View Portfolio Item"
+msgstr "查看作品条目"
+
+#: post-type/portfolio-type.php:24
+msgid "Search Portfolio"
+msgstr "搜索作品"
+
+#: post-type/portfolio-type.php:25
+msgid "No Portfolio found"
+msgstr "没有找到作品集条目"
+
+#: post-type/portfolio-type.php:26
+msgid "No Portfolio found in Trash"
+msgstr "回收站未找到作品条目"
+
+#: post-type/portfolio-type.php:35
+msgid "portfolio_project"
+msgstr "作品项目"
+
+#: post-type/portfolio-type.php:62 post-type/portfolio-type.php:64
+msgid "Portfolio Types"
+msgstr "所有作品类型"
+
+#: post-type/portfolio-type.php:65 post-type/portfolio-type.php:67
+msgid "Portfolio Type"
+msgstr "作品类型"
+
+#: post-type/slideshow-type.php:9
+msgid "Slideshow"
+msgstr "轮换图片"
+
+#: post-type/slideshow-type.php:10
+msgid "Slideshow Item"
+msgstr "轮换图片条目"
+
+#: post-type/slideshow-type.php:12
+msgid "Add New Slideshow Item"
+msgstr "添加新的轮换图片条目"
+
+#: post-type/slideshow-type.php:13
+msgid "Edit Slideshow Item"
+msgstr "编辑轮换图片条目"
+
+#: post-type/slideshow-type.php:14
+msgid "New Slideshow Item"
+msgstr "新轮换图片条目"
+
+#: post-type/slideshow-type.php:15
+msgid "View Slideshow Item"
+msgstr "查看轮换图片条目"
+
+#: post-type/slideshow-type.php:16
+msgid "Search Slideshow"
+msgstr "搜索轮换图片"
+
+#: post-type/slideshow-type.php:17
+msgid "Nothing found"
+msgstr "未找到 "
+
+#: post-type/slideshow-type.php:18
+msgid "Nothing found in Trash"
+msgstr "回收站未找到"
+
+#: post-type/slideshow-type.php:27
+msgid "slideshow"
+msgstr "轮换图片"
+
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "%s 的搜索结果"
+
+#: shortcodes/shortcodes_widget.php:887
+msgid "Please enter your name."
+msgstr "请输入你的名字"
+
+#: shortcodes/shortcodes_widget.php:888
+msgid "Please enter your email address."
+msgstr "请输入你的邮箱地址"
+
+#: shortcodes/shortcodes_widget.php:889
+msgid "You entered an invalid email address."
+msgstr "你的邮箱地址正确"
+
+#: shortcodes/shortcodes_widget.php:890
+msgid "Please enter a message."
+msgstr "请输入消息"
+
+#: shortcodes/shortcodes_widget.php:929
+msgid "[Contact Form] From"
+msgstr "联系输入框"
+
+#: shortcodes/shortcodes_widget.php:963
+msgid "Thanks, your email was sent successfully."
+msgstr "感谢，你的邮件已经发送成功。"
+
+#: shortcodes/shortcodes_widget.php:966
+msgid "Sorry, an error occured."
+msgstr "对不起，发生了错误。"
+
+#: shortcodes/shortcodes_widget.php:973
+msgid "Name:"
+msgstr "名字："
+
+#: shortcodes/shortcodes_widget.php:988
+msgid "Email:"
+msgstr "邮件："
+
+#: shortcodes/shortcodes_widget.php:1005
+msgid "Message:"
+msgstr "消息："
+
+#: shortcodes/tinymce/config.php:13
+msgid "Button URL"
+msgstr "按钮链接"
+
+#: shortcodes/tinymce/config.php:14
+msgid "Add the button's url eg http://example.com"
+msgstr "添加按钮链接"
+
+#: shortcodes/tinymce/config.php:18
+msgid "Button Style"
+msgstr "按钮样式"
+
+#: shortcodes/tinymce/config.php:19
+msgid "Select the button's style, ie the button's color"
+msgstr "选择按钮样式"
+
+#: shortcodes/tinymce/config.php:34
+msgid "Button Size"
+msgstr "按钮大小"
+
+#: shortcodes/tinymce/config.php:35
+msgid "Select the button's size"
+msgstr "选择按钮大小"
+
+#: shortcodes/tinymce/config.php:37
+msgid "Small"
+msgstr "小"
+
+#: shortcodes/tinymce/config.php:38
+msgid "Medium"
+msgstr "中"
+
+#: shortcodes/tinymce/config.php:39
+msgid "Large"
+msgstr "大"
+
+#: shortcodes/tinymce/config.php:44
+msgid "Button Type"
+msgstr "按钮类型"
+
+#: shortcodes/tinymce/config.php:45
+msgid "Select the button's type"
+msgstr "选择按钮类型"
+
+#: shortcodes/tinymce/config.php:47
+msgid "Round"
+msgstr "圆角"
+
+#: shortcodes/tinymce/config.php:48
+msgid "Square"
+msgstr "方角"
+
+#: shortcodes/tinymce/config.php:53
+msgid "Button Target"
+msgstr "按钮目标"
+
+#: shortcodes/tinymce/config.php:54
+msgid ""
+"_self = open in same window. _blank = open in new window. _parent = open in "
+"parent frame. _top = open in full body of the window. "
+msgstr ""
+
+#: shortcodes/tinymce/config.php:56
+msgid "_self"
+msgstr "_self"
+
+#: shortcodes/tinymce/config.php:57
+msgid "_blank"
+msgstr "_blank"
+
+#: shortcodes/tinymce/config.php:58
+msgid "_parent"
+msgstr "_parent"
+
+#: shortcodes/tinymce/config.php:59
+msgid "_top"
+msgstr "_top"
+
+#: shortcodes/tinymce/config.php:63
+msgid "Button Text"
+msgstr "按钮文字"
+
+#: shortcodes/tinymce/config.php:65
+msgid "Button's Text"
+msgstr "按钮文字"
+
+#: shortcodes/tinymce/config.php:66
+msgid "Add the button's text"
+msgstr "添加按钮文字"
+
+#: shortcodes/tinymce/config.php:70
+msgid "Insert Button Shortcode"
+msgstr "插入按钮短代码"
+
+#: shortcodes/tinymce/config.php:84
+msgid "Toggle Title"
+msgstr "“开关”标题"
+
+#: shortcodes/tinymce/config.php:85
+msgid "Add the title that will go above the toggle content"
+msgstr "添加“开关”标题内容"
+
+#: shortcodes/tinymce/config.php:89 shortcodes/tinymce/config.php:161
+msgid "Content"
+msgstr "内容"
+
+#: shortcodes/tinymce/config.php:91
+msgid "Toggle Content"
+msgstr "“开关”内容"
+
+#: shortcodes/tinymce/config.php:92
+msgid "Add the toggle content. Will accept HTML"
+msgstr "添加“开关”内容，支持HTML"
+
+#: shortcodes/tinymce/config.php:96
+msgid "Toggle State"
+msgstr "“开关”状态"
+
+#: shortcodes/tinymce/config.php:97
+msgid "Select the state of the toggle on page load"
+msgstr ""
+
+#: shortcodes/tinymce/config.php:106
+msgid "Insert Toggle Content Shortcode"
+msgstr "插入“开关”内容短代码"
+
+#: shortcodes/tinymce/config.php:117
+msgid "Insert Tab Shortcode"
+msgstr "插入标签短代码"
+
+#: shortcodes/tinymce/config.php:124
+msgid "Tab Title"
+msgstr "标签标题："
+
+#: shortcodes/tinymce/config.php:125 shortcodes/tinymce/config.php:158
+msgid "Title of the tab"
+msgstr "标签标题"
+
+#: shortcodes/tinymce/config.php:128 shortcodes/tinymce/config.php:130
+msgid "Tab Content"
+msgstr "标签内容"
+
+#: shortcodes/tinymce/config.php:131
+msgid "Add the tabs content"
+msgstr "添加标签内容"
+
+#: shortcodes/tinymce/config.php:135
+msgid "Add Tab"
+msgstr "添加标签"
+
+#: shortcodes/tinymce/config.php:150
+msgid "Insert Accordions Shortcode"
+msgstr "插入折叠容器短代码"
+
+#: shortcodes/tinymce/config.php:157
+msgid "Accordions Title"
+msgstr "折叠容器 标题"
+
+#: shortcodes/tinymce/config.php:163
+msgid "Accordions Content"
+msgstr "折叠容器 内容"
+
+#: shortcodes/tinymce/config.php:164
+msgid "Add the Accordions content"
+msgstr "添加折叠容器内容"
+
+#: shortcodes/tinymce/config.php:168
+msgid "Add Accordion"
+msgstr "添加折叠容器"
+
+#: shortcodes/tinymce/config.php:186
+msgid "Insert Columns Shortcode"
+msgstr "插入列短代码"
+
+#: shortcodes/tinymce/config.php:193
+msgid "Columns Style"
+msgstr "列样式"
+
+#: shortcodes/tinymce/config.php:194
+msgid "Select the columns's width style."
+msgstr "选择列宽样式"
+
+#: shortcodes/tinymce/config.php:211
+msgid "Last or not columns"
+msgstr "最后一列"
+
+#: shortcodes/tinymce/config.php:212
+msgid "Select whether or not is last column of a row."
+msgstr ""
+
+#: shortcodes/tinymce/config.php:221
+msgid "Columns Content"
+msgstr "列内容"
+
+#: shortcodes/tinymce/config.php:222
+msgid "Add the columns's content"
+msgstr "添加列内容"
+
+#: shortcodes/tinymce/config.php:227
+msgid "Add Column"
+msgstr "添加列"
+
+#: shortcodes/tinymce/config.php:243
+msgid "Icon of Checklist Style"
+msgstr "列表图标样式"
+
+#: shortcodes/tinymce/config.php:244
+msgid "Select the Checklist's style, ie the checklist icon type"
+msgstr ""
+
+#: shortcodes/tinymce/config.php:262
+msgid "Checklist Icon Color"
+msgstr "列表图标颜色"
+
+#: shortcodes/tinymce/config.php:263
+msgid "Select the Checklist's style, ie the checklist colour"
+msgstr ""
+
+#: shortcodes/tinymce/config.php:280
+msgid "Checklist Content"
+msgstr "列表内容"
+
+#: shortcodes/tinymce/config.php:281
+msgid "Add the checklist's text"
+msgstr "添加列表文字"
+
+#: shortcodes/tinymce/config.php:286
+msgid "Insert checklist"
+msgstr "插入列表"
+
+#: shortcodes/tinymce/config.php:302 shortcodes/tinymce/config.php:374
+msgid "Icon Text Style"
+msgstr "图标文字样式"
+
+#: shortcodes/tinymce/config.php:303 shortcodes/tinymce/config.php:375
+msgid "Select the icon type."
+msgstr "选择图标类型"
+
+#: shortcodes/tinymce/config.php:329
+msgid "Icon and Text Color"
+msgstr "图标和文字颜色"
+
+#: shortcodes/tinymce/config.php:330
+msgid "Select the Icon and Text Color."
+msgstr "选择图标和文字颜色"
+
+#: shortcodes/tinymce/config.php:347
+msgid "url"
+msgstr "链接地址"
+
+#: shortcodes/tinymce/config.php:348
+msgid "Add the url's text"
+msgstr "添加文字链接"
+
+#: shortcodes/tinymce/config.php:354
+msgid "Icon Text"
+msgstr "图标文字"
+
+#: shortcodes/tinymce/config.php:355 shortcodes/tinymce/config.php:421
+msgid "Add the icon's text"
+msgstr "添加图标文字"
+
+#: shortcodes/tinymce/config.php:360 shortcodes/tinymce/config.php:426
+msgid "Insert Icon Text"
+msgstr "插入图标文字"
+
+#: shortcodes/tinymce/config.php:401
+msgid "Icon Text Color"
+msgstr "图标文字颜色"
+
+#: shortcodes/tinymce/config.php:402
+msgid "Select the icon's color."
+msgstr "选择图标颜色"
+
+#: shortcodes/tinymce/config.php:420
+msgid "icon Text"
+msgstr "图标文字"
+
+#: shortcodes/tinymce/config.php:440
+msgid "Highlight Color"
+msgstr "高亮颜色"
+
+#: shortcodes/tinymce/config.php:441
+msgid "Select the Highlight's color."
+msgstr "选择高亮文字颜色"
+
+#: shortcodes/tinymce/config.php:458
+msgid "Highlight Text"
+msgstr "高亮文字"
+
+#: shortcodes/tinymce/config.php:459
+msgid "Add the highlight's text"
+msgstr "添加高亮文字"
+
+#: shortcodes/tinymce/config.php:464
+msgid "Insert Highlight Shortcode"
+msgstr "插入高亮短代码"
+
+#: shortcodes/tinymce/config.php:477
+msgid "Divider Color"
+msgstr "分割线颜色"
+
+#: shortcodes/tinymce/config.php:478
+msgid "Select the Divider's color."
+msgstr "选择分割线颜色"
+
+#: shortcodes/tinymce/config.php:486
+msgid "Divider Style"
+msgstr "分割线样式"
+
+#: shortcodes/tinymce/config.php:487
+msgid "Select the Divider's style."
+msgstr "选择分割线样式"
+
+#: shortcodes/tinymce/config.php:496
+msgid "Divider Text"
+msgstr "分割线文字"
+
+#: shortcodes/tinymce/config.php:497
+msgid "Add the divider's text"
+msgstr "添加分割线文字"
+
+#: shortcodes/tinymce/config.php:502
+msgid "Insert divider Shortcode"
+msgstr "插入分割线短代码"
+
+#: shortcodes/tinymce/config.php:516
+msgid "Boxes Style"
+msgstr "盒子样式"
+
+#: shortcodes/tinymce/config.php:517
+msgid "Select the Boxes's style."
+msgstr "选择盒子样式"
+
+#: shortcodes/tinymce/config.php:536
+msgid "Width of box Text"
+msgstr "盒子文字宽度"
+
+#: shortcodes/tinymce/config.php:537
+#, php-format
+msgid "Set the width of the box, eg 0~100% or 200px, default is auto width."
+msgstr ""
+
+#: shortcodes/tinymce/config.php:541
+msgid "Box align"
+msgstr "盒子对齐"
+
+#: shortcodes/tinymce/config.php:542
+msgid "Select the align of box."
+msgstr "选择盒子对齐"
+
+#: shortcodes/tinymce/config.php:552
+msgid "Box Content Text"
+msgstr "盒子内容文字"
+
+#: shortcodes/tinymce/config.php:553
+msgid "Add the box's content text"
+msgstr "添加盒子内容文字"
+
+#: shortcodes/tinymce/config.php:558
+msgid "Insert Box Shortcode"
+msgstr "插入盒子短代码"
+
+#: shortcodes/tinymce/config.php:573
+msgid "Tips"
+msgstr "提示"
+
+#: shortcodes/tinymce/config.php:574
+msgid "Add the Tips link"
+msgstr "添加提示链接"
+
+#: shortcodes/tinymce/config.php:579
+msgid "Text"
+msgstr "文字"
+
+#: shortcodes/tinymce/config.php:580
+msgid "Add the Tooltip content."
+msgstr "添加提示内容"
+
+#: shortcodes/tinymce/config.php:585
+msgid "Insert Tooltip Shortcode"
+msgstr "插入“提示”短代码"
+
+#: shortcodes/tinymce/config.php:599
+msgid "Quote Style"
+msgstr "引语样式"
+
+#: shortcodes/tinymce/config.php:600
+msgid "Select the Quote's style."
+msgstr "选择引用样式"
+
+#: shortcodes/tinymce/config.php:610
+msgid "width"
+msgstr "宽"
+
+#: shortcodes/tinymce/config.php:611
+#, php-format
+msgid "Set the width of the box, eg 0~100% or 300px, default is auto width."
+msgstr ""
+
+#: shortcodes/tinymce/config.php:616
+msgid "Quote Text"
+msgstr "引语文字"
+
+#: shortcodes/tinymce/config.php:617
+msgid "Add the quote's text"
+msgstr "添加引用文字"
+
+#: shortcodes/tinymce/config.php:622
+msgid "Insert Quote Shortcode"
+msgstr "插入引用短代码"
+
+#: shortcodes/tinymce/config.php:638
+msgid "dropcap Style"
+msgstr "首字下沉 样式"
+
+#: shortcodes/tinymce/config.php:639
+msgid "Select the dropcap's style."
+msgstr "选择首字下沉 样式"
+
+#: shortcodes/tinymce/config.php:649
+msgid "Dropcap Color"
+msgstr "首字下沉 颜色"
+
+#: shortcodes/tinymce/config.php:650
+msgid "Select the Dropcap's color."
+msgstr "选择颜色"
+
+#: shortcodes/tinymce/config.php:666
+msgid "Dropcap Text"
+msgstr "首字下沉 文字"
+
+#: shortcodes/tinymce/config.php:667
+msgid "Add the Dropcap's text"
+msgstr "添加首字下沉 文字"
+
+#: shortcodes/tinymce/config.php:672
+msgid "Insert Dropcap Shortcode"
+msgstr "插入短代码"
+
+#: sidebar-books.php:17 sidebar-two.php:17 sidebar.php:20
+msgid "Meta"
+msgstr "功能"
+
+#: sidebar-books.php:29 sidebar-two.php:30 sidebar.php:33 single-books.php:34
+#: single-freebies.php:34 single.php:44
+msgid "Ads via Google"
+msgstr "Google 广告"
+
+#: tag.php:17
+msgid "Popular Tags"
+msgstr "受欢迎标签"
+
+#~ msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "继续阅读 <span class=\"meta-nav\">&rarr;</span>"
+
+#~ msgid "Blog Archives"
+#~ msgstr "博客归档"
+
+#~ msgid ", "
+#~ msgstr ", "
+
+#~ msgid "<span>1</span>"
+#~ msgstr "<span>1</span>"
+
+#~ msgid "<span>%</span>"
+#~ msgstr "<span>%</span>"
+
+#~ msgid "http://thirtyjin.com/"
+#~ msgstr "http://thirtyjin.com/"
+
+#~ msgid "ThirtyOne Theme "
+#~ msgstr "ThirtyOne 主题"
+
+#~ msgid "ThirtyJin"
+#~ msgstr "ThirtyJin"
+
+#~ msgid ""
+#~ "<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date"
+#~ "\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> "
+#~ "<span class=\"sep\"> by </span> <span class=\"author vcard\"><a class="
+#~ "\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></"
+#~ "span>"
+#~ msgstr ""
+#~ "<a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date"
+#~ "\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> "
+#~ "<span class=\"sep\"> by </span> <span class=\"author vcard\"><a class="
+#~ "\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></"
+#~ "span>"
+
+#~ msgid ""
+#~ "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span "
+#~ "class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</"
+#~ "abbr></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s "
+#~ "&times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+#~ "\"gallery\">%8$s</a>"
+#~ msgstr ""
+#~ "<span class=\"meta-prep meta-prep-entry-date\">发表于 </span> <span class="
+#~ "\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></"
+#~ "span>，尺寸为 <a href=\"%3$s\" title=\"到全尺寸图像的链接\">%4$s &次; "
+#~ "%5$s</a>，属于 <a href=\"%6$s\" title=\"回到 %7$s\" rel=\"gallery\">%8$s</"
+#~ "a>"
+
+#~ msgid "Error 404 - Not Found"
+#~ msgstr "错误404 - 没有找到"
+
+#~ msgid "Sorry, but you are looking for something that isn't here."
+#~ msgstr "对不起，你找的内容不再这里。"
+
+#~ msgid ""
+#~ "Sorry, but nothing matched your search criteria. Please try again with "
+#~ "some different keywords."
+#~ msgstr "抱歉，没有符合您搜索条件的结果。请换其它关键词再试。"
+
+#~ msgid "Linkedin"
+#~ msgstr "Linkedin"
+
+#~ msgid "Google+"
+#~ msgstr "Google+"
+
+#~ msgid "RSS"
+#~ msgstr "RSS"
+
+#~ msgid "ON/OFF"
+#~ msgstr "开启/关闭"
+
+#~ msgid "Meta Robots"
+#~ msgstr "Robots 数据元"
+
+#~ msgid "0 <span class=\"reply\">comments &rarr;</span>"
+#~ msgstr "0 <span class=\"reply\">条评论 &rarr;</span>"
+
+#~ msgid "1 <span class=\"reply\">comment &rarr;</span>"
+#~ msgstr "1 <span class=\"reply\">条评论 &rarr;</span>"
+
+#~ msgid "% <span class=\"reply\">comments &rarr;</span>"
+#~ msgstr "% <span class=\"reply\">条评论  &rarr;</span>"
+
+#~ msgid " on"
+#~ msgstr "在"
+
+#~ msgid "Remove Media"
+#~ msgstr "移除媒体"
+
+#~ msgid "Option Tree"
+#~ msgstr "控制树"
+
+#~ msgid "General"
+#~ msgstr "常规"
+
+#~ msgid "Dual Sidebar"
+#~ msgstr "双边栏"
+
+#~ msgid "Left Dual Sidebar"
+#~ msgstr "左双边栏"
+
+#~ msgid "Right Dual Sidebar"
+#~ msgstr "右双边栏"
+
+#~ msgid "Link"
+#~ msgstr "链接"
+
+#~ msgid "edit"
+#~ msgstr "编辑"
+
+#~ msgid "Delete"
+#~ msgstr "删除"
+
+#~ msgid "Add Choice"
+#~ msgstr "增加条件"
+
+#~ msgid "Add Setting"
+#~ msgstr "增加设置"
+
+#~ msgid "Activate"
+#~ msgstr "激活"
+
+#~ msgid "New Layout"
+#~ msgstr "新建布局"
+
+#~ msgid "Colorpicker"
+#~ msgstr "配色方案"
+
+#~ msgid "Select"
+#~ msgstr "选择"
+
+#~ msgid "Usage"
+#~ msgstr "用途"
+
+#~ msgid "required"
+#~ msgstr "要求"
+
+#~ msgid "Default:"
+#~ msgstr "默认："
+
+#~ msgid "Default"
+#~ msgstr "默认"
+
+#~ msgid "Creating a Layout"
+#~ msgstr "新建一个布局"
+
+#~ msgid "Deleting a Layout"
+#~ msgstr "删除一个布局"
+
+#~ msgid "No Posts Found"
+#~ msgstr "未找到日志"
+
+#~ msgid ""
+#~ "You can re-order with drag & drop, the order will update after saving."
+#~ msgstr "你可以通过拖拽调整顺序，保存后顺序更新。"
+
+#~ msgid "No Pages Found"
+#~ msgstr "未找到页面"
+
+#~ msgid "No Tags Found"
+#~ msgstr "未找到标签"
+
+#~ msgid "Save Changes"
+#~ msgstr "保存更改"
+
+#~ msgid "Import Theme Options"
+#~ msgstr "导入主题选项"
+
+#~ msgid "Save Layouts"
+#~ msgstr "保存布局"
+
+#~ msgid "ThirtyOne"
+#~ msgstr "ThirtyOne"
+
+#~ msgid "Support Froum"
+#~ msgstr "支持论坛"
+
+#~ msgid "Reset Options"
+#~ msgstr "重置选项"
+
+#~ msgid "Theme Options updated."
+#~ msgstr "主题选项更新"
+
+#~ msgid "Theme Options reset."
+#~ msgstr "主题选项重置"
+
+#~ msgid "Save Settings"
+#~ msgstr "保存设置"
+
+#~ msgid "Theme Options UI"
+#~ msgstr "主题选项界面"
+
+#~ msgid "Import"
+#~ msgstr "导入"
+
+#~ msgid "Export"
+#~ msgstr "导出"
+
+#~ msgid "Layouts"
+#~ msgstr "布局"
+
+#~ msgid "Theme Options UI Builder"
+#~ msgstr "主题选项界面创建"
+
+#~ msgid "Theme Options"
+#~ msgstr "主题选项"
+
+#~ msgid "Documentation"
+#~ msgstr "文档"
+
+#~ msgid "Creating Options"
+#~ msgstr "创建选项"
+
+#~ msgid "Theme Mode"
+#~ msgstr "主题模式"
+
+#~ msgid "Layouts Overview"
+#~ msgstr "布局预览"
+
+#~ msgid "Project Types"
+#~ msgstr "项目类型"
+
+#~ msgid "Project Type"
+#~ msgstr "项目类型"
+
+#~ msgid "View Project"
+#~ msgstr "查看项目"
+
+#, fuzzy
+#~ msgid "Slider shortcode"
+#~ msgstr "%s 主题选项"
+
+#~ msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+#~ msgstr "有点尴尬诶。"
+
+#~ msgid ""
+#~ "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+#~ "searching, or one of the links below, can help."
+#~ msgstr "我们可能无法找到您需要的内容。或许下面的链接和搜索功能可以帮到您。"
+
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "试试在月度归档中寻找。%1$s"
+
+#~ msgid "Aside"
+#~ msgstr "日志"
+
+#~ msgid "Reply"
+#~ msgstr "回复"
+
+#~ msgid ""
+#~ "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s"
+#~ "\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+#~ msgstr ""
+#~ "此条目发表在 %1$s 分类目录，贴了 %2$s 标签。将<a href=\"%3$s\" title=\"链"
+#~ "向 %4$s 的固定链接\" rel=\"bookmark\">固定链接</a>加入收藏夹。"
+
+#~ msgid ""
+#~ "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title="
+#~ "\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+#~ msgstr ""
+#~ "此条目发表在 %1$s 分类目录。将<a href=\"%3$s\" title=\"链向 %4$s 的固定链"
+#~ "接\" rel=\"bookmark\">固定链接</a>加入收藏夹。 "
+
+#~ msgid "Gallery"
+#~ msgstr "多媒体陈列厅"
+
+#, fuzzy
+#~ msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "下一篇 <span class=\"meta-nav\">&rarr;</span>"
+
+#~ msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+#~ msgstr "查看所有由 %s 发表的文章 <span class=\"meta-nav\">&rarr;</span>"
+
+#~ msgid "Status"
+#~ msgstr "状态"
+
+#~ msgid "Showcase Sidebar"
+#~ msgstr "陈列柜边栏"
+
+#~ msgid "The sidebar for the optional Showcase Template"
+#~ msgstr "有时可能会用到的“陈列柜模板”上的边栏"
+
+#, fuzzy
+#~ msgid "Footer Area Four"
+#~ msgstr "第二页脚区域"
+
+#~ msgid "Main menu"
+#~ msgstr "主菜单"
+
+#~ msgid "Skip to primary content"
+#~ msgstr "跳至主内容区域"
+
+#~ msgid "Skip to secondary content"
+#~ msgstr "跳至副内容区域"
+
+#~ msgid "Image navigation"
+#~ msgstr "图像导航"
+
+#~ msgid "Featured Post"
+#~ msgstr "特色文章"
+
+#~ msgid "Leave a reply"
+#~ msgstr "发表回复"
+
+#~ msgid "<b>1</b> Reply"
+#~ msgstr "<b>1</b> 条回复"
+
+#~ msgid "<b>%</b> Replies"
+#~ msgstr "<b>%</b> 条回复"
+
+#, fuzzy
+#~ msgid ""
+#~ "Some themes provide customization options that are grouped together on a "
+#~ "Theme Options screen. If you change themes, options may change or "
+#~ "disappear, as they are theme-specific. Your current theme, Thirty One, "
+#~ "provides the following Theme Options:"
+#~ msgstr ""
+#~ "有些主题在“主题选项”页面提供个性化的设置项。若您换用其它主题，这些选项可能"
+#~ "会变更或消失。您当前使用的主题（Twenty Eleven）提供如下主题选项："
+
+#~ msgid ""
+#~ "<strong>Color Scheme</strong>: You can choose a color palette of \"Light"
+#~ "\" (light background with dark text) or \"Dark\" (dark background with "
+#~ "light text) for your site."
+#~ msgstr ""
+#~ "<strong>色彩方案</strong>：您可为站点选择“浅色”方案（背景浅色、文字深色）"
+#~ "或“深色”方案（背景深色、文字浅色）。"
+
+#~ msgid ""
+#~ "<strong>Link Color</strong>: You can choose the color used for text links "
+#~ "on your site. You can enter the HTML color or hex code, or you can choose "
+#~ "visually by clicking the \"Select a Color\" button to pick from a color "
+#~ "wheel."
+#~ msgstr ""
+#~ "<strong>链接颜色</strong>：您可指定站点中链接的颜色。您可输入 HTML 颜色或"
+#~ "十六进制代码，或通过“选择颜色”按钮来从色彩环中选择。"
+
+#~ msgid ""
+#~ "<strong>Default Layout</strong>: You can choose if you want your "
+#~ "site&#8217;s default layout to have a sidebar on the left, the right, or "
+#~ "not at all."
+#~ msgstr ""
+#~ "<strong>默认布局</strong>：您可为您的站点选择默认布局，如边栏的显示与否，"
+#~ "及其显示位置。"
+
+#~ msgid ""
+#~ "Remember to click \"Save Changes\" to save any changes you have made to "
+#~ "the theme options."
+#~ msgstr "请不要忘记在完成后点击“保存更改”，使主题设置生效。"
+
+#~ msgid "For more information:"
+#~ msgstr "更多信息："
+
+#~ msgid ""
+#~ "<a href=\"http://codex.wordpress.org/Appearance_Theme_Options_Screen\" "
+#~ "target=\"_blank\">Documentation on Theme Options</a>"
+#~ msgstr ""
+#~ "<a href=\"http://codex.wordpress.org/Appearance_Theme_Options_Screen\" "
+#~ "target=\"_blank\">关于主题选项的文档（英文）</a>"
+
+#~ msgid ""
+#~ "<a href=\"http://wordpress.org/support/\" target=\"_blank\">Support "
+#~ "Forums</a>"
+#~ msgstr ""
+#~ "<a href=\"http://zh-cn.forums.wordpress.org/\" target=\"_blank\">中文支持"
+#~ "论坛</a>"
+
+#~ msgid "Light"
+#~ msgstr "浅色"
+
+#~ msgid "Dark"
+#~ msgstr "深色"
+
+#~ msgid "Content on right"
+#~ msgstr "将内容置于右侧"
+
+#~ msgid "One-column, no sidebar"
+#~ msgstr "一栏、不带边栏"
+
+#, fuzzy
+#~ msgid "Preview"
+#~ msgstr "概述"
+
+#~ msgctxt "comments number"
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgctxt "comments number"
+#~ msgid "%"
+#~ msgstr "%"
+
+#~ msgid "<span class=\"%1$s\">Posted in</span> %2$s"
+#~ msgstr "<span class=\"%1$s\">发表在</span> %2$s"
+
+#~ msgid "<span class=\"%1$s\">Tagged</span> %2$s"
+#~ msgstr "<span class=\"%1$s\">标签有</span> %2$s"
+
+#~ msgid "Featuring: %s"
+#~ msgstr "特色：%s"
+
+#~ msgid "Semantic Personal Publishing Platform"
+#~ msgstr "优雅的个人发布平台"
+
+#~ msgid "View all posts by %s"
+#~ msgstr "查看所有由 %s 发布的文章"
+
+#~ msgid ""
+#~ "This entry was posted in %1$s and tagged %2$s by <a href=\"%6$s\">%5$s</"
+#~ "a>. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel="
+#~ "\"bookmark\">permalink</a>."
+#~ msgstr ""
+#~ "此条目由 <a href=\"%6$s\">%5$s</a> 发表在 %1$s 分类目录，并贴了 %2$s 标"
+#~ "签。将<a href=\"%3$s\" title=\"链向 %4$s 的固定链接\" rel=\"bookmark\">固"
+#~ "定链接</a>加入收藏夹。"
+
+#~ msgid ""
+#~ "This entry was posted in %1$s by <a href=\"%6$s\">%5$s</a>. Bookmark the "
+#~ "<a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</"
+#~ "a>."
+#~ msgstr ""
+#~ "此条目是由 <a href=\"%6$s\">%5$s</a> 发表在 %1$s 分类目录的。将<a href="
+#~ "\"%3$s\" title=\"链向 %4$s 的固定链接\" rel=\"bookmark\">固定链接</a>加入"
+#~ "收藏夹。"
+
+#~ msgid ""
+#~ "This entry was posted by <a href=\"%6$s\">%5$s</a>. Bookmark the <a href="
+#~ "\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+#~ msgstr ""
+#~ "此条目是由 <a href=\"%6$s\">%5$s</a> 发表的。将<a href=\"%3$s\" title=\"链"
+#~ "向 %4$s 的固定链接\" rel=\"bookmark\">固定链接</a>加入收藏夹。"
+
+#~ msgid "This gallery contains <a %1$s>%2$s photo</a>."
+#~ msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
+#~ msgstr[0] "此多媒体陈列厅包含 <a %1$s>%2$s 张图像</a>。"
+
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "《%2$s》上有 %1$s 条评论"
+
+#~ msgid "Wheel"
+#~ msgstr "车轮"
+
+#~ msgid "Shore"
+#~ msgstr "海边"
+
+#~ msgid "Trolley"
+#~ msgstr "电车"
+
+#~ msgid "Chessboard"
+#~ msgstr "棋盘"
+
+#~ msgid "Lanterns"
+#~ msgstr "灯笼"
+
+#~ msgid "Willow"
+#~ msgstr "垂柳"
+
+#~ msgid "Hanoi Plant"
+#~ msgstr "河内奇葩"
+
+#~ msgid "Link to %s"
+#~ msgstr "到 %s 的链接"
+
+#~ msgid "Twenty Eleven"
+#~ msgstr "2011"
+
+#~ msgid "http://wordpress.org/extend/themes/twentyeleven"
+#~ msgstr "http://wordpress.org/extend/themes/twentyeleven"
+
+#~ msgid ""
+#~ "The 2011 theme for WordPress is sophisticated, lightweight, and "
+#~ "adaptable. Make it yours with a custom menu, header image, and background "
+#~ "-- then go further with available theme options for light or dark color "
+#~ "scheme, custom link colors, and three layout choices. Twenty Eleven comes "
+#~ "equipped with a Showcase page template that transforms your front page "
+#~ "into a showcase to show off your best content, widget support galore "
+#~ "(sidebar, three footer areas, and a Showcase page widget area), and a "
+#~ "custom \"Ephemera\" widget to display your Aside, Link, Quote, or Status "
+#~ "posts. Included are styles for print and for the admin editor, support "
+#~ "for featured images (as custom header images on posts and pages and as "
+#~ "large images on featured \"sticky\" posts), and special styles for six "
+#~ "different post formats."
+#~ msgstr ""
+#~ "WordPress 的 2011 主题是一款成熟稳重的轻量级主题，适应能力极强。您可自定"
+#~ "义“自定义菜单”、“顶部图像”和“背景”等 —— 甚至可以选择深色或浅色的配色方案、"
+#~ "链接颜色，以及布局。Twenty Eleven 还包含了“陈列柜”页面模板，可以让您的站点"
+#~ "首页变成一个展示您站点最佳内容的陈列柜；还有很多可以放置小工具的区域（如边"
+#~ "栏、三个页脚区域，以及陈列柜页面的小工具区域）；同时新增了一个“碎碎念”小工"
+#~ "具，专门显示您的“日志”类、“链接”类、“引语”类和“状态”类文章。这个主题亦有打"
+#~ "印和后台编辑器专用的样式表、“特色图像”支持（替换文章和页面上的顶部图像，和"
+#~ "置顶的文章的大图），以及六种文章样式的支持。"
+
+#~ msgid "the WordPress team"
+#~ msgstr "WordPress 团队"
+
+#~ msgid ""
+#~ "dark, light, white, black, gray, one-column, two-columns, left-sidebar, "
+#~ "right-sidebar, fixed-width, flexible-width, custom-background, custom-"
+#~ "colors, custom-header, custom-menu, editor-style, featured-image-header, "
+#~ "featured-images, full-width-template, microformats, post-formats, rtl-"
+#~ "language-support, sticky-post, theme-options, translation-ready"
+#~ msgstr ""
+#~ "深色, 浅色, 白色, 黑色, 灰色, 一栏, 两栏, 边栏在左, 边栏在右, 定宽, 可变"
+#~ "宽, 自定义背景, 自定义颜色, 自定义顶部, 自定义菜单, 编辑器样式, 顶部特色图"
+#~ "像, 特色图像, 占满宽度的模板, 微缩形式, 文章形式, 右至左语言支持, 文章置"
+#~ "顶, 主题选项, 可供翻译"
